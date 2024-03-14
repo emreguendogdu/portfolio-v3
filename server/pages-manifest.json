@@ -1,1 +1,1 @@
-{"/_document":"pages/_document.js","/_error":"pages/_error.js","/_app":"pages/_app.js","/":"pages/index.html","/book-notes":"pages/book-notes.html","/page":"pages/page.html","/book-notes/[slug]":"pages/book-notes/[slug].js","/404":"pages/404.html"}
+{"/_app":"pages/_app.js","/book-notes":"pages/book-notes.html","/":"pages/index.html","/page":"pages/page.html","/_document":"pages/_document.js","/_error":"pages/_error.js","/book-notes/[slug]":"pages/book-notes/[slug].js","/404":"pages/404.html"}
