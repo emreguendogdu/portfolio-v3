@@ -1,5 +1,5 @@
 // pages/_app.js
-import "@/index.css" // Adjust the path to where your index.css is located
+import "@/globals.css" // Adjust the path to where your globals.css is located
 import Nav from "@/components/Nav/Nav"
 import { AppProps } from "next/app"
 import { LazyMotion, domAnimation } from "framer-motion"

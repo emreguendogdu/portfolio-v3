@@ -5,7 +5,7 @@ import ArrowToRight from "@/components/icons/ArrowToRight"
 import { Input } from "@/components/Input/Form"
 import Form from "@/components/Input/Form"
 import Image from "@/components/Image/Image"
-import "@/index.css"
+import "@/globals.css"
 import { poppins } from "@/utils/fonts"
 
 // TODO: Add document.title -> "Book Notes | Osman G."
