@@ -6,6 +6,7 @@ import { Input } from "@/components/Input/Form"
 import Form from "@/components/Input/Form"
 import Image from "@/components/Image/Image"
 import "@/index.css"
+import { poppins } from "@/utils/fonts"
 
 // TODO: Add document.title -> "Book Notes | Osman G."
 // https://github.com/vercel/next.js/tree/deprecated-main/examples/layout-component
@@ -38,7 +39,7 @@ function BookCard({
 export default function BookNotes() {
   return (
     <>
-      <section id="book-notes">
+      <section id="book-notes" className={poppins.variable}>
         <div id="book-notes__info">
           <div className="container">
             <div>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import "../index.css"
-import { manrope, poppins, space_grotesk } from "@/utils/fonts"
 
 export const metadata: Metadata = {
   title: "Osman Emre Gundogdu",
@@ -13,10 +12,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={`${space_grotesk.variable} ${poppins.variable} ${manrope.variable}`}
-    >
+    <html lang="en">
       <head>
         <link
           rel="icon"
@@ -24,9 +20,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <div id="root">
-          {children}
-        </div>
+        <div id="root">{children}</div>
         <script type="module" src="/src/main.jsx"></script>
       </body>
     </html>

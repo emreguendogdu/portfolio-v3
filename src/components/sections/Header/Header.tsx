@@ -2,7 +2,7 @@ import { m } from "framer-motion"
 import { ChevronDown } from "../../icons/ChevronDown"
 import "./Header.scss"
 
-const delay = 0.1
+const delay = 2.25 // Both scrollIcon and Highlight Background uses this
 
 const scrollIconVariants = {
   start: {

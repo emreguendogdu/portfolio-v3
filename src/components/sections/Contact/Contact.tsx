@@ -10,6 +10,7 @@ import { Input } from "@/components/Input/Form"
 import Form from "@/components/Input/Form"
 import Image from "@/components/Image/Image"
 import { m } from "framer-motion"
+import { manrope } from "@/utils/fonts"
 
 const sendSuccessMessage = () => {
   return toast.success(
@@ -57,7 +58,7 @@ const ContactForm = () => {
   const sendEmail = (e: any) => {
     e.preventDefault()
 
-    const currentForm = form?.current as HTMLFormElement | undefined;
+    const currentForm = form?.current as HTMLFormElement | undefined
 
     if (currentForm) {
       emailjs
@@ -95,6 +96,7 @@ export default function Contact() {
   return (
     <m.section
       id="contact"
+      className={manrope.variable}
       variants={contactVariants}
       initial="initial"
       whileInView="whileInView"

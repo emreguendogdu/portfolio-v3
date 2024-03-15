@@ -1,13 +1,10 @@
 import { Html, Head, Main, NextScript } from "next/document"
-import { manrope, poppins, space_grotesk } from "@/utils/fonts"
+import { space_grotesk } from "@/utils/fonts"
 export default function Document() {
   return (
-    <Html
-      lang="en"
-      className={`${space_grotesk.variable} ${poppins.variable} ${manrope.variable}`}
-    >
+    <Html lang="en">
       <Head />
-      <body>
+      <body className={space_grotesk.variable}>
         <Main />
         <NextScript />
       </body>

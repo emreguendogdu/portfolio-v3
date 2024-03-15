@@ -1,5 +1,6 @@
 import { ShareLink } from "@/components/icons/ShareLink"
 import "./Book.scss"
+import { poppins } from "@/utils/fonts"
 
 interface BookProps {
   book: {
@@ -15,7 +16,7 @@ export default function Book({
   book: { title, impressions, actionableSteps, quotes, date },
 }: BookProps) {
   return (
-    <section className="book-section">
+    <section className={`book-section ${poppins.variable}`}>
       <article className="book">
         <h4 className="book-date">{date}</h4>
         <h1 className="book-title">{title}</h1>
