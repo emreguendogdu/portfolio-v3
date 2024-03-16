@@ -12,8 +12,6 @@
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
   -moz-osx-font-smoothing: grayscale;
-
-  font-family: var(--font-space-grotesk);
 }
 
 html {
@@ -21,9 +19,12 @@ html {
   scroll-behavior: smooth;
 }
 
+main {
+  font-family: var(--font-space-grotesk);
+}
+
 body {
   margin: 0;
-  font-family: var(--font-space-grotesk);
 }
 
 * {
