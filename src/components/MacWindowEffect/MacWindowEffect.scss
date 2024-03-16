@@ -16,6 +16,7 @@
   width: 100%;
   background-color: black;
 
+  z-index: 2;
   .circle {
     @extend %circle-shared;
     background-color: #ed6a5e;
