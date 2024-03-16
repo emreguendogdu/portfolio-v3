@@ -8,4 +8,10 @@
     object-fit: scale-down;
     background-color: black;
   }
+
+  @media only screen and (max-width: 768px) {
+    img {
+      background-color: var(--background-color);
+    }
+  }
 }
