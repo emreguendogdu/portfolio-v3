@@ -137,7 +137,7 @@ export default function Contact() {
       <div id="contact__image">
         <Image
           alt="Chair, laptop, table and images on the wall. Two people work meeting atmosphere."
-          src="/images/contact.jpg"
+          src="/images/contact.webp"
         />
       </div>
       <Toaster position="top-right" />

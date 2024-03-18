@@ -11,8 +11,8 @@ type ImageProps = {
 export default function MyImage({ src, alt, ariaHidden = false }: ImageProps) {
   const imagePath = src.match(/\/([^/]+)$/)?.[1]
   const blurDataURL = `/images/small-images/${imagePath?.replace(
-    /\.jpg$/,
-    "-small.jpg"
+    /\.webp$/,
+    "-small.webp"
   )}`
   return (
     <div className="image-wrapper">
