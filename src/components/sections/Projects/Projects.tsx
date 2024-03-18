@@ -29,9 +29,10 @@ function Project({
   project: { title, body, tags, color, liveLink },
 }: ProjectProps) {
   const src = projectImgLink(title)
+  console.log(liveLink !== undefined)
   const liveHref = liveLink
-    ? `https://osmangund.github.io/${kebabCase(title)}`
-    : liveLink
+    ? liveLink
+    : `https://osmangund.github.io/${kebabCase(title)}`
   return (
     <m.div
       variants={projectVariants}
