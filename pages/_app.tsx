@@ -18,6 +18,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           content="Osman Emre Gundogdu, Osman, Emre, Gundogdu, Gündoğdu, Frontend, Developer, Web, Portfolio, Personal, Website, Book, Notes, Software, Engineer, Front, End, Full, Fullstack, Stack, osmangund, Canother, wyarn, osmangund.github.io"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link
           rel="icon"
           type="image/x-icon"
