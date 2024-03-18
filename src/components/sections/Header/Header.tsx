@@ -2,7 +2,7 @@ import { m } from "framer-motion"
 import { ChevronDown } from "../../icons/ChevronDown"
 import "./Header.scss"
 
-const delay = 2.25 // Both scrollIcon and Highlight Background uses this
+const delay = 3 // Both scrollIcon and Highlight Background uses this
 
 const scrollIconVariants = {
   start: {
@@ -31,7 +31,7 @@ const headerAnims = {
     transition: {
       duration: 1,
       ease: "easeInOut",
-      staggerChildren: 0.6472,
+      staggerChildren: 0.9708,
     },
   },
 }
