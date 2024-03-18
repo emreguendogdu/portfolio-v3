@@ -6,9 +6,8 @@ export const projectContents = [
   },
   {
     title: "Letters App",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum officia, earum quisquam modi labore quidem veniam accusantium totam maiores quos at distinctio, esse ipsum fugit aspernatur debitis nihil?",
-    tags: ["Next.js", "React", "Tailwind CSS", "MongoDB"],
-    liveGhPages: false,
+    body: "Created a full-stack app with Next.js, React, Tailwind CSS, TypeScript, and MongoDB. Users can create, read, update, and delete letters on Markdown format while displaying the live preview. The app is fully responsive. Used SWR for data fetching. Deployed on Vercel.",
+    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "MongoDB"],
     liveLink: "https://letters-app.vercel.app/",
   },
   {

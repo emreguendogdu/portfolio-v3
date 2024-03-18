@@ -12,7 +12,6 @@ interface ProjectProps {
     body: string
     tags: string[]
     color?: string
-    liveGhPages?: boolean
     liveLink?: string
   }
 }
@@ -27,10 +26,10 @@ const projectVariants = {
 }
 
 function Project({
-  project: { title, body, tags, color, liveGhPages = true, liveLink },
+  project: { title, body, tags, color, liveLink },
 }: ProjectProps) {
   const src = projectImgLink(title)
-  const liveHref = liveGhPages
+  const liveHref = liveLink
     ? `https://osmangund.github.io/${kebabCase(title)}`
     : liveLink
   return (
