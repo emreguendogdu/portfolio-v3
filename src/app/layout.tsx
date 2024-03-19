@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import "../globals.css"
+import Nav from "@/components/Nav/Nav"
 
 export const metadata: Metadata = {
   title: "Osman Emre Gundogdu",
@@ -13,14 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="icon"
-          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😈</text></svg>"
-        />
-      </head>
+      <head></head>
       <body>
-        <div id="root">{children}</div>
+        <div id="root">
+          <Nav />
+          {children}
+        </div>
         <script type="module" src="/src/main.jsx"></script>
       </body>
     </html>
