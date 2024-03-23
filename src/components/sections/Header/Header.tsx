@@ -1,24 +1,8 @@
 import { m } from "framer-motion"
-import { ChevronDown } from "../../icons/ChevronDown"
 import "./Header.scss"
+import ScrollIcon from "./ScrollIcon"
 
 const delay = 2.5 // Both scrollIcon and Highlight Background uses this
-
-const scrollIconVariants = {
-  start: {
-    y: 0,
-  },
-  end: {
-    y: -10,
-    transition: {
-      repeat: Infinity,
-      ease: "easeInOut",
-      duration: 0.5,
-      delay: delay,
-      repeatType: "reverse" as const,
-    },
-  },
-}
 
 const headerAnims = {
   start: {
@@ -70,15 +54,7 @@ export default function Header() {
           </m.span>
         </m.p>
       </m.div>
-      <m.div
-        variants={scrollIconVariants}
-        whileInView="end"
-        initial="start"
-        id="scroll__icon__wrapper"
-        viewport={{ once: true, amount: 0.5 }}
-      >
-        <ChevronDown id="scroll__icon" />
-      </m.div>
+      <ScrollIcon />
     </m.header>
   )
 }
