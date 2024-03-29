@@ -2,7 +2,7 @@ import { m } from "framer-motion"
 import "./Header.scss"
 import ScrollIcon from "./ScrollIcon"
 
-const delay = 2.5 // Both scrollIcon and Highlight Background uses this
+const delay = 2 // Both scrollIcon and Highlight Background uses this
 
 const headerAnims = {
   start: {
@@ -24,7 +24,7 @@ const highlightBgAnims = {
   start: {
     width: 0,
   },
-  end: { width: "113%", transition: { delay: delay - 0.25 } },
+  end: { width: "113%", transition: { delay: delay + 0.25 } },
 }
 
 export default function Header() {
