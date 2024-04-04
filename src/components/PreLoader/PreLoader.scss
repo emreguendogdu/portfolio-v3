@@ -1,0 +1,56 @@
+$preloader-color: linear-gradient(
+  90deg,
+  var(--preloader-second-color),
+  var(--preloader-first-color)
+);
+
+$text-color: white;
+@mixin svgClasses {
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh + 600px);
+  top: -300px;
+  left: 0;
+  pointer-events: none;
+  overflow-x: hidden;
+}
+
+#preloader {
+  svg,
+  #background {
+    @include svgClasses();
+    z-index: 30;
+  }
+  #background {
+    background: $preloader-color;
+  }
+
+  p {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    translate: -50%;
+    z-index: 31;
+    text-align: center;
+
+    font-size: 4rem;
+    letter-spacing: -1px;
+    font-weight: 700;
+    color: $text-color;
+    line-height: 1.35;
+    font-family: var(--font-space-grotesk);
+    span.smaller {
+      font-size: 3rem;
+    }
+  }
+}
+
+.hidden {
+  height: 0;
+  display: none;
+  visibility: hidden;
+}
+
+svg {
+  fill: url(#MyGradient);
+}

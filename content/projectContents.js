@@ -1,6 +1,6 @@
 export const projectContents = [
   {
-    title: "Fitness Website",
+    title: "111 Fitness",
     body: "By using React, created reusable components that can further be used to improve this 111 Fitness Page or to create new fitness websites. Used styled-components to style the components and framer-motion to add animations. Implemeted a blur loading system with small versions for images. Works flawlessly on mobile devices.",
     tags: ["React", "styled-components", "framer-motion"],
   },

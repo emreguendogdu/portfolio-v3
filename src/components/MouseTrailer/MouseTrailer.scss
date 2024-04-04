@@ -11,7 +11,11 @@ $mobile: 768px;
   top: 50%;
   translate: -50% -50%;
   opacity: 0.55;
-  background: linear-gradient(to right, #1643af, #e0b0ff);
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--accent-color)
+  );
 
   animation: rotate 20s linear infinite;
   filter: blur(100px);

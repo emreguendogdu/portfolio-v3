@@ -4,13 +4,13 @@ nav {
   display: flex;
   justify-content: space-between;
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   padding-inline: 90px;
   font-family: var(--manrope);
 
   line-height: 2;
-  top: 0;
 
   z-index: 3;
   transition: 350ms ease-in-out;
@@ -65,8 +65,7 @@ nav {
   }
 
   @media (max-width: $mobile) {
-    padding-inline: 3rem;
-
+    padding: 0 60px 0 20px;
     .bars-label {
       display: block;
       align-self: center;

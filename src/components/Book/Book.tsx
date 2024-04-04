@@ -15,6 +15,7 @@ interface BookProps {
 export default function Book({
   book: { title, impressions, actionableSteps, quotes, date },
 }: BookProps) {
+  if (title == undefined) return null
   return (
     <section className={`book-section ${poppins.variable}`}>
       <article className="book">

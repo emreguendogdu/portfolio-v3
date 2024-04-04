@@ -1,8 +1,12 @@
 :root {
   --background-color: #242424;
-  --accent-color: mediumpurple;
-  --black: #010101;
-  --purple: #685ad3;
+  --background-color: black;
+  --secondary-color: hsl(220, 39%, 31%);
+  --accent-color: #243b55;
+  --preloader-first-color: #42275a;
+  --preloader-first-color: #141e30;
+  --preloader-second-color: #734b6d;
+  --preloader-second-color: #243b55;
 
   color: rgba(255, 255, 255, 0.87);
   background-color: var(--background-color);

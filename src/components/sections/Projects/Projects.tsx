@@ -5,6 +5,8 @@ import { kebabCase } from "@/utils/kebabCase"
 import { m } from "framer-motion"
 import { projectImgLink } from "@/utils/links"
 import Image from "@/components/Image/Image"
+import ArrowLink from "@/components/icons/ArrowLink"
+import { GithubLogo } from "@/components/icons/Github"
 
 interface ProjectProps {
   project: {
@@ -40,8 +42,11 @@ function Project({
       viewport={{ amount: 0.2, once: true }}
       className={`project ${kebabCase(title)}`}
     >
+      {/* <m.h1 className="title" variants={projectVariants}>
+        {title}
+      </m.h1> */}
       <div className="project__image">
-        <MacWindowEffect />
+        {/* <MacWindowEffect /> */}
         <a
           href={liveHref}
           target="_blank"
@@ -54,42 +59,33 @@ function Project({
             ariaHidden={true}
           />
         </a>
-      </div>
-      <div className="project__content">
-        <m.div className="tags" variants={projectVariants}>
-          {tags.map((tag, i) => (
-            <p key={i} className="tag">
-              {tag}
-            </p>
-          ))}
-        </m.div>
-        <m.h1 className="title" variants={projectVariants}>
-          {title}
-        </m.h1>
-        <m.p className="body" variants={projectVariants}>
-          {body}
-        </m.p>
         <m.div className="project__links" variants={projectVariants}>
-          <a
-            href={`https://github.com/osmangund/${kebabCase(title)}`}
-            target="_blank"
+          <m.a
+            href={`/projects/${kebabCase(title)}`}
             rel="noreferrer"
-            className="button"
-            data-text="Source code"
-            data-color={color}
+            className="button title-button"
+            variants={projectVariants}
           >
-            Source code
-          </a>
-          <a
-            href={liveHref}
-            target="_blank"
-            rel="noreferrer"
-            className="button"
-            data-text="Live"
-            data-color={color}
-          >
-            Live
-          </a>
+            {title}
+          </m.a>
+          <div className="container">
+            <a
+              href={`https://github.com/osmangund/${kebabCase(title)}`}
+              target="_blank"
+              rel="noreferrer"
+              className="button"
+            >
+              <GithubLogo fill="white" />
+            </a>
+            <a
+              href={liveHref}
+              target="_blank"
+              rel="noreferrer"
+              className="button"
+            >
+              <ArrowLink fill="white" />
+            </a>
+          </div>
         </m.div>
       </div>
     </m.div>

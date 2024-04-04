@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import "../globals.css"
 import Nav from "@/components/Nav/Nav"
+import PreLoader from "@/components/PreLoader/PreLoader"
 
 export const metadata: Metadata = {
   title: "Osman Emre Gundogdu",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <head></head>
       <body>
         <div id="root">
+          <PreLoader />
           <Nav />
           {children}
         </div>
