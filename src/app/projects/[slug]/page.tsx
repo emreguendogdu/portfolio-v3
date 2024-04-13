@@ -1,5 +1,5 @@
 import { projectContents } from "@/../content/projectContents"
-import Project from "@/components/Project/project"
+import Project from "@/components/project/project"
 import "@/globals.css"
 import { kebabCase } from "@/utils/kebabCase"
 

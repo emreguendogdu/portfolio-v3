@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import { Bars } from "../icons/Bars"
 import "./Nav.scss"
 import PropTypes from "prop-types"
-import { handleNavPage, handleNavSection } from "../../utils/links"
+import { handleNavPage, handleNavSection } from "@/utils/links"
 import Link from "next/link"
 import { dance, manrope } from "@/utils/fonts"
 
@@ -34,6 +34,7 @@ const handleScroll = () => {
 
     prevScrollPos = currentScrollPos
   })
+  return () => window.removeEventListener("scroll", () => {})
 }
 
 const NavLink = ({

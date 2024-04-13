@@ -1,7 +1,8 @@
+import { PRELOADER_DURATION } from "@/components/PreLoader/anims"
 import { ChevronDown } from "../../icons/ChevronDown"
 import { m } from "framer-motion"
 
-const delay = 2.5
+const delay = PRELOADER_DURATION
 const scrollIconVariants = {
   start: {
     y: 0,

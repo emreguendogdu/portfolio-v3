@@ -2,36 +2,45 @@ $mobile: 768px;
 
 #mouse-trail {
   position: fixed;
-
   width: 500px;
   height: 500px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  opacity: 0.55;
-  background: linear-gradient(
-    to right,
-    var(--secondary-color),
-    var(--accent-color)
-  );
-
-  animation: rotate 20s linear infinite;
-  filter: blur(100px);
-  -webkit-filter: blur(100px);
-  z-index: -2;
-
-  @media (max-width: $mobile) {
-    display: none;
+  #blur {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(200px);
+    z-index: 13;
   }
-}
+  #blob {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    opacity: 0.55;
+    background: linear-gradient(
+      to right,
+      var(--secondary-color),
+      var(--accent-color)
+    );
 
-@keyframes rotate {
-  50% {
-    scale: 1.25 1.12;
+    animation: rotate 20s linear infinite;
+    z-index: -2;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
-  to {
-    rotate: 360deg;
+
+  @keyframes rotate {
+    0% {
+      rotate: 0deg;
+    }
+    50% {
+      scale: 0.8 1.5;
+    }
+    to {
+      rotate: 360deg;
+    }
   }
 }

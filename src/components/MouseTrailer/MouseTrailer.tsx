@@ -23,11 +23,17 @@ export default function MouseTrailer() {
     window.addEventListener("mousemove", (e) => {
       animateTrailer(mousetrail, e)
     })
+    return () => {
+      window.removeEventListener("mousemove", (e) => {
+        animateTrailer(mousetrail, e)
+      })
+    }
   }, [])
 
   return (
-    <div id="mouse-trail-wrapper" aria-hidden>
-      <div id="mouse-trail" aria-hidden />
+    <div id="mouse-trail" aria-hidden>
+      <div id="blob" aria-hidden />
+      <div id="blur" aria-hidden />
     </div>
   )
 }

@@ -1,9 +1,8 @@
 import "./Projects.scss"
-import MacWindowEffect from "@/components/MacWindowEffect/MacWindowEffect"
 import { projectContents } from "@/../content/projectContents"
 import { kebabCase } from "@/utils/kebabCase"
 import { m } from "framer-motion"
-import { projectImgLink } from "@/utils/links"
+import { PROJECT_IMG_LINK } from "@/utils/links"
 import Image from "@/components/Image/Image"
 import ArrowLink from "@/components/icons/ArrowLink"
 import { GithubLogo } from "@/components/icons/Github"
@@ -27,10 +26,8 @@ const projectVariants = {
   },
 }
 
-function Project({
-  project: { title, body, tags, color, liveLink },
-}: ProjectProps) {
-  const src = projectImgLink(title)
+function Project({ project: { title, liveLink } }: ProjectProps) {
+  const src = PROJECT_IMG_LINK(title)
   const liveHref = liveLink
     ? liveLink
     : `https://osmangund.github.io/${kebabCase(title)}`
@@ -42,11 +39,7 @@ function Project({
       viewport={{ amount: 0.2, once: true }}
       className={`project ${kebabCase(title)}`}
     >
-      {/* <m.h1 className="title" variants={projectVariants}>
-        {title}
-      </m.h1> */}
       <div className="project__image">
-        {/* <MacWindowEffect /> */}
         <a
           href={liveHref}
           target="_blank"

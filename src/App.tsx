@@ -11,7 +11,7 @@ export default function App() {
   return (
     <>
       <LazyMotion features={domAnimation}>
-        <MouseTrailer />
+        {/* <MouseTrailer /> */}
         <main className={space_grotesk.variable}>
           <Header />
           <Projects />
