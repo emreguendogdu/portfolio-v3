@@ -6,6 +6,42 @@ export const dance = localFont({
   variable: "--font-dance",
 })
 
+export const PPMonument = localFont({
+  src: [
+    {
+      path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-RegularItalic.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-Black.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-BlackItalic.otf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-Light.otf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-LightItalic.otf",
+      weight: "200",
+      style: "italic",
+    },
+  ],
+  variable: "--font-ppmonument",
+})
+
 export const space_grotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",

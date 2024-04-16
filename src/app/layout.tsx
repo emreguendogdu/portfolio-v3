@@ -18,7 +18,7 @@ export default function RootLayout({
       <head></head>
       <body>
         <div id="root">
-          <PreLoader />
+          {/* <PreLoader /> */}
           <Nav />
           {children}
         </div>
