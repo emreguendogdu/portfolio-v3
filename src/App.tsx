@@ -4,10 +4,11 @@ import { LazyMotion, domAnimation } from "framer-motion"
 import MouseTrailer from "@/components/MouseTrailer/MouseTrailer"
 import Contact from "@/components/sections/Contact/Contact"
 import Header from "@/components/sections/Header/Header"
-import Projects from "@/components/sections/Projects/Projects"
 import { PPMonument, space_grotesk } from "@/utils/fonts"
-import NewContact from "./components/sections/newcontact/newcontact"
+import NewContact from "./components/sections/contact/contact"
 import useLenis from "./hooks/useLenis"
+import About from "./components/about/about"
+import Projects from "./components/sections/Projects/projects"
 
 export default function App() {
   // useLenis()
@@ -17,7 +18,8 @@ export default function App() {
         {/* <MouseTrailer /> */}
         <main className={`${space_grotesk.variable} ${PPMonument.variable}`}>
           <Header />
-          {/* <Projects /> */}
+          <About />
+          <Projects />
         </main>
         <NewContact />
       </LazyMotion>

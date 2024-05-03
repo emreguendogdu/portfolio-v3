@@ -3,12 +3,11 @@ import "./Header.scss"
 import ScrollIcon from "./ScrollIcon"
 import React, { useRef } from "react"
 import Paragraph from "./Character"
-import Circle from "./circle"
 import { PRELOADER_DURATION } from "@/components/PreLoader/anims"
 import Scene from "@/components/3dmodels/scene"
 
 const h1 = "OSMAN EMRE GUNDOGDU"
-const p = "Creative front end developer and UI/UX designer based in Turkey."
+const p = "Front end developer and UI/UX designer based in Turkey."
 
 export default function Header() {
   const targetRef = useRef(null)
@@ -47,10 +46,9 @@ export default function Header() {
           >
             <Paragraph paragraph={h1} Element="h1" />
           </motion.div>
-          <Paragraph paragraph={p} Element="p" />
+          {/* <Paragraph paragraph={p} Element="p" /> */}
         </motion.div>
         <div className="container circle-container">
-          {/* <Circle /> */}
           <Scene />
         </div>
         <ScrollIcon />

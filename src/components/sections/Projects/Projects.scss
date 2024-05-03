@@ -1,136 +1,76 @@
-$mobile: 768px;
-$accent-color: mediumpurple;
-$transition: all 350ms ease-in-out;
-
-@mixin button-text-style {
-  text-decoration: none;
+.projects-section {
+  font-family: var(--font-poppins);
   font-weight: 600;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: $transition;
-}
-@mixin glass-effect {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1.4px);
-  -webkit-backdrop-filter: blur(1.4px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-#projects {
-  display: flex;
-  min-height: 100vh;
-  padding: 10rem 2rem 25rem 2rem;
-  gap: 4rem;
-  flex-wrap: wrap;
-
-  .project {
-    position: relative;
-    flex-direction: column;
-    display: flex;
-    width: calc(50% - 2rem);
-    min-height: 500px;
-    &.letters-app {
-      width: 1200px;
-      height: 800px;
-    }
-    .project__image {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transition: $transition;
-      z-index: 3;
-      border-radius: 20px;
-      flex: 0 0 80%;
-      img {
-        border-radius: 10px;
-      }
-
-      &:hover {
-        scale: 1;
-      }
-    }
-
-    .title {
-      font-size: 3rem;
-      font-weight: 600;
-
-      color: $accent-color;
-      margin-inline: 0;
-      margin-block: 2rem;
-    }
-
-    .project__links {
-      position: absolute;
-      bottom: 0;
-      translate: 5% -25%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 99;
-      .container {
-        display: flex;
-        gap: 10px;
-      }
-
-      a.button {
-        @include button-text-style;
-        display: inline-block;
-        border-radius: 50%;
-        min-height: 80px;
-        min-width: 80px;
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        position: relative;
-        background: black;
-        color: white;
-        &.title-button {
-          min-width: 120px;
-          min-height: 60px;
-          text-align: center;
-          padding: 2rem 2rem;
-          text-transform: lowercase;
-          font-size: 2rem;
-          border-radius: 9999px;
-        }
-        * {
-          fill: white;
-        }
-      }
-    }
+  letter-spacing: -5px;
+  .big-title {
+    font-size: 6rem;
+    color: white;
+    text-align: left;
+    margin-block: 4rem;
+    text-indent: 4rem;
   }
 
-  @media (max-width: $mobile) {
-    padding: 1rem;
-    gap: 2rem;
-    .project {
-      flex-direction: column;
-      width: 100%;
-      .project__image {
-        position: relative;
-        height: 250px;
-        width: 100%;
+  .projects {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
 
-        img {
-          padding-top: 0;
-          object-fit: cover;
+    .project {
+      width: 45%;
+      width: 752px;
+      height: 752px;
+      padding: 2rem 2rem;
+
+      .image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        .bg-image {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          // background-image: url("/imagesnew/" + (var(--i) + 1) + ".png");
+          // background-position: center;
+          background-size: cover;
+          opacity: 0.5;
+          z-index: -1;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .project-image {
+          border-radius: 10%;
+          width: 75%;
+          height: 100%;
+          object-fit: scale-down;
+          object-position: center;
         }
       }
-      .title {
-        font-size: 3rem;
-      }
-      .project__links {
-        a {
-          font-size: 1.6rem;
-          &.button {
-            height: 56px;
-            width: 56px;
-          }
+
+      .body {
+        margin-top: 1rem;
+        .title {
+          font-size: 3rem;
+          margin-bottom: 16px;
+          font-weight: 600;
+          letter-spacing: -1px;
+        }
+        .tag {
+          border: 1px solid lightgray;
+          border-radius: 10px;
+          font-size: 1.5rem;
+          margin-inline: 4px;
+          text-transform: uppercase;
+          padding: 0.5rem 1rem;
+          font-weight: 400;
+          letter-spacing: -0.5px;
         }
       }
     }

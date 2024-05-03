@@ -52,7 +52,7 @@ export const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
   display: "swap",
-  weight: ["400", "700"],
+  weight: ["200", "300", "400", "700"],
 })
 
 export const manrope = Manrope({

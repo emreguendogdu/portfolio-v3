@@ -1,0 +1,25 @@
+:root {
+  --width: 250px;
+  --width-to-height: 1.732;
+}
+$linear: linear-gradient(black, transparent);
+.triangle-container {
+  &.middle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+
+    z-index: -1;
+  }
+  .triangle {
+    border-style: solid;
+    border-width: 0 var(--width) (calc(var(--width) * var(--width-to-height)))
+      var(--width);
+    border-color: transparent transparent #e4e4e6 transparent;
+
+    background: $linear;
+    mask-image: $linear;
+    opacity: 0.01;
+  }
+}

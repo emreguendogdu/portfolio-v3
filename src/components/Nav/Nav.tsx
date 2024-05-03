@@ -7,6 +7,7 @@ import PropTypes from "prop-types"
 import { handleNavPage, handleNavSection } from "@/utils/links"
 import Link from "next/link"
 import { dance, manrope } from "@/utils/fonts"
+import Triangle from "../triangle/triangle"
 
 interface NavLinkProps {
   link: {
@@ -41,13 +42,17 @@ const NavLink = ({
   link: { title, navSection = true },
   toggleMenu,
 }: NavLinkProps) => {
-  return navSection ? (
-    <li>
-      <Link href={handleNavSection(title)} onClick={toggleMenu}>
-        {title}
-      </Link>
-    </li>
-  ) : (
+  if (navSection) {
+    return (
+      <li>
+        <Link href={handleNavSection(title)} onClick={toggleMenu}>
+          {title}
+        </Link>
+      </li>
+    )
+  }
+
+  return (
     <li>
       <Link href={handleNavPage(title)} onClick={toggleMenu}>
         {title}

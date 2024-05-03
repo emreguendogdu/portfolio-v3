@@ -1,0 +1,27 @@
+
+.cursor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  position: fixed;
+  background-image: url("/circle.svg");
+  width: 192px;
+  height: 192px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  z-index: 33;
+  user-select: none;
+  pointer-events: none;
+
+  p {
+    color: black;
+    font-family: var(--font-ppmonument);
+    font-weight: 400;
+    letter-spacing: -1px;
+    font-size: 2rem;
+  }
+}

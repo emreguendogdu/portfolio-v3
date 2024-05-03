@@ -1,11 +1,10 @@
 import { motion, useTransform } from "framer-motion"
 
 export default function Pillar({ tl, scrollYProgress, position }) {
-  const timeline = tl
   const PILLAR_PARALLAX = useTransform(scrollYProgress, [0, 1], [0, -250])
   const PILLAR_OPACITY = useTransform(
     scrollYProgress,
-    [timeline.PILLAR_APPEAR_START, timeline.PILLAR_APPEAR_END],
+    [tl.PILLAR_APPEAR_START, tl.PILLAR_APPEAR_END],
     [0, 1]
   )
 
@@ -14,7 +13,7 @@ export default function Pillar({ tl, scrollYProgress, position }) {
 
   const PILLAR_SCALE = useTransform(
     scrollYProgress,
-    [timeline.start, timeline.end],
+    [tl.start, tl.end],
     [0.6, 1]
   )
   return (

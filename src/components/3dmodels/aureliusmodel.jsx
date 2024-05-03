@@ -3,30 +3,25 @@ import { useFrame, useThree } from "@react-three/fiber"
 import { useRef } from "react"
 import { Camera, WebGLRenderer } from "three"
 import * as THREE from "three"
+import { DRACOLoader, GLTFLoader } from "three/examples/jsm/Addons.js"
 
-const material = new THREE.MeshPhysicalMaterial({
-  color: 0xffffff,
-  metalness: 0,
-  roughness: 0,
-  thickness: 0.2,
-  ior: 1.35,
-  transmission: 1,
-  opacity: 1,
-  chromaticAberration: 0.5,
-  transparent: true,
-  backside: true,
-})
+function isCloseEnough(a, b, tolerance = 0.0001) {
+  return Math.abs(a - b) <= tolerance
+}
 
 export default function AureliusModel() {
   const mesh = useRef()
-  const { nodes, materials } = useGLTF("aurelius1.glb")
+  const { nodes, materials } = useGLTF(
+    "aurelius3.glb",
+    "https://www.gstatic.com/draco/versioned/decoders/1.5.7/"
+  )
   const { viewport } = useThree()
 
   useFrame(() => {
     mesh.current.rotation.x += 0.004
-    mesh.current.rotation.z += 0.0006
+    mesh.current.rotation.z += 0.004
+    // console.log(mesh.curren3t.rotation)
   })
-  console.log(nodes)
   return (
     <group dispose={null} ref={mesh} scale={0.6}>
       <mesh
