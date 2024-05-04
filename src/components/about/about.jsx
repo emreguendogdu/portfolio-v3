@@ -12,9 +12,8 @@ const tl = {
   ENTRY_START: 0.125,
   ENTRY_END: 0.325,
   TRIANGLE_START: 0.325,
-  BODY_Y_START: 0.425, // .425
+  BODY_Y_START: 0.425,
   BODY_Y_END: 0.525,
-  PROJECTS_END: 0.625,
   TRIANGLE_END: 0.725,
 }
 
@@ -27,8 +26,8 @@ export default function About() {
 
   const SECTION_OPACITY = useTransform(
     scrollYProgress,
-    [0, tl.SECTION_OPACITY_END],
-    [0, 1]
+    [0, tl.SECTION_OPACITY_END, tl.TRIANGLE_END, 0.9],
+    [0, 1, 1, 0]
   )
 
   const ENTRY_OPACITY = useTransform(
@@ -77,12 +76,6 @@ export default function About() {
     scrollYProgress,
     [tl.BODY_Y_END, tl.TRIANGLE_END],
     [0, 1]
-  )
-
-  const PROJECTS_START = useTransform(
-    scrollYProgress,
-    [tl.BODY_Y_END, tl.PROJECTS_END],
-    ["210%", "0%"]
   )
 
   return (

@@ -1,4 +1,4 @@
-import { Space_Grotesk, Poppins, Manrope } from "next/font/google"
+import { Space_Grotesk, Poppins, Manrope, Inter } from "next/font/google"
 import localFont from "next/font/local"
 
 export const dance = localFont({
@@ -52,11 +52,18 @@ export const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
   display: "swap",
-  weight: ["200", "300", "400", "700"],
+  weight: ["200", "300", "400", "500", "700"],
+})
+
+export const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  weight: ["200", "300", "400", "500", "700"],
 })
 
 export const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--manrope",
+  variable: "--font-manrope",
   display: "swap",
 })

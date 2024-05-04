@@ -6,8 +6,10 @@ import Paragraph from "./Character"
 import { PRELOADER_DURATION } from "@/components/PreLoader/anims"
 import Scene from "@/components/3dmodels/scene"
 
-const h1 = "OSMAN EMRE GUNDOGDU"
-const p = "Front end developer and UI/UX designer based in Turkey."
+let h1 = "OSMAN EMRE GUNDOGDU"
+h1 = "og"
+const p =
+  "I love building and creating on web. Especially with React and Nextjs."
 
 export default function Header() {
   const targetRef = useRef(null)
@@ -46,7 +48,7 @@ export default function Header() {
           >
             <Paragraph paragraph={h1} Element="h1" />
           </motion.div>
-          {/* <Paragraph paragraph={p} Element="p" /> */}
+          <Paragraph paragraph={p} Element="p" />
         </motion.div>
         <div className="container circle-container">
           <Scene />

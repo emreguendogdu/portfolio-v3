@@ -1,22 +1,15 @@
 import "./projects.scss"
-
 import React, { useState } from "react"
 import { projectContents } from "../../../../content/projectContents"
 import { kebabCase } from "@/utils/kebabCase"
 import { PPMonument, poppins } from "@/utils/fonts"
-import Cursor from "./cursor"
 import Image from "next/image"
 
 export default function Projects() {
-  const [hovered, setHovered] = useState(false)
   function Project({ title, tags, href, src, i }) {
     // const imageBlurDataURL = await getBase64(`/imagesnew/${i}+1.png`)
     return (
-      <div
-        className={`project ${PPMonument.variable} ${poppins.variable}`}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
+      <div className={`project ${PPMonument.variable} ${poppins.variable}`}>
         <a href={href} target="_blank" rel="noreferrer">
           <div className="image-wrapper">
             <div className="bg-image">
@@ -55,7 +48,7 @@ export default function Projects() {
 
   return (
     <>
-      <Cursor hovered={hovered} />
+      {/* <Cursor hovered={hovered} /> */}
       <section className="projects-section">
         <h1 className="big-title">Selected Projects (4)</h1>
         <div className="projects">
@@ -71,7 +64,6 @@ export default function Projects() {
                   href={href}
                   src={src}
                   i={i}
-                  // setHovered={setHovered}
                 />
               </React.Fragment>
             )
