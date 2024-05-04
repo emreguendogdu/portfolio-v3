@@ -1,7 +1,6 @@
 "use client"
 
 import { LazyMotion, domAnimation } from "framer-motion"
-import Header from "@/components/sections/Header/Header"
 import { PPMonument, space_grotesk } from "@/utils/fonts"
 import NewContact from "./components/sections/contact/contact"
 import useLenis from "./hooks/useLenis"

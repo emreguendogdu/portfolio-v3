@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Bars } from "../icons/Bars"
-import "./nav2.scss"
+import "./nav.scss"
 import PropTypes from "prop-types"
 import { handleNavPage, handleNavSection } from "@/utils/links"
 import Link from "next/link"
@@ -61,7 +61,7 @@ const NavLink = ({ link: { title, navSection = true }, setIsOpen }) => {
   )
 }
 
-export default function Nav2() {
+export default function Nav() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
