@@ -13,6 +13,7 @@ const tl = {
   ENTRY_END: 0.325,
   TRIANGLE_START: 0.325,
   BODY_Y_START: 0.425,
+  ENTRY_OPACITY_END: 0.45,
   BODY_Y_END: 0.525,
   TRIANGLE_END: 0.725,
 }
@@ -32,7 +33,7 @@ export default function About() {
 
   const ENTRY_OPACITY = useTransform(
     scrollYProgress,
-    [tl.ENTRY_START, tl.ENTRY_END, tl.TRIANGLE_START, tl.BODY_Y_START],
+    [tl.ENTRY_START, tl.ENTRY_END, tl.TRIANGLE_START, tl.ENTRY_OPACITY_END],
     [0, 1, 1, 0]
   )
 

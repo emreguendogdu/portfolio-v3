@@ -60,7 +60,7 @@ export default function Hero() {
     <>
       <section id="hero" className={`${PPMonument.variable}`}>
         <div className="text-container left">
-          <h1>{textToLetter("Lorem ipsum dolor", NAME_VARIANTS)}</h1>
+          <h1>{textToLetter("OSMAN EMRE GUNDOGDU", NAME_VARIANTS)}</h1>
         </div>
         <div className="right-container">
           <div className="empty-container" />

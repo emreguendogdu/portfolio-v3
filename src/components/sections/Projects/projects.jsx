@@ -1,5 +1,5 @@
 import "./projects.scss"
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import { projectContents } from "../../../../content/projectContents"
 import { kebabCase } from "@/utils/kebabCase"
 import { PPMonument, poppins } from "@/utils/fonts"
@@ -7,7 +7,6 @@ import Image from "next/image"
 
 export default function Projects() {
   function Project({ title, tags, href, src, i }) {
-    // const imageBlurDataURL = await getBase64(`/imagesnew/${i}+1.png`)
     return (
       <div className={`project ${PPMonument.variable} ${poppins.variable}`}>
         <a href={href} target="_blank" rel="noreferrer">

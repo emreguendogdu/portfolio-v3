@@ -2,6 +2,10 @@
   font-family: var(--font-poppins);
   font-weight: 600;
   letter-spacing: -5px;
+
+  min-height: 600vh;
+  position: relative;
+
   .big-title {
     font-size: 6rem;
     color: white;
@@ -24,6 +28,10 @@
       height: 752px;
       padding: 2rem 2rem;
 
+      position: sticky;
+      top: 0;
+      background-color: black;
+
       .image-wrapper {
         position: relative;
         width: 100%;
@@ -38,7 +46,7 @@
           // background-image: url("/imagesnew/" + (var(--i) + 1) + ".png");
           // background-position: center;
           background-size: cover;
-          opacity: 0.5;
+          opacity: 0.8;
           z-index: -1;
           img {
             width: 100%;
