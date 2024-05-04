@@ -1,5 +1,5 @@
 import "./projects.scss"
-import React, { useRef, useState } from "react"
+import React from "react"
 import { projectContents } from "../../../../content/projectContents"
 import { kebabCase } from "@/utils/kebabCase"
 import { PPMonument, poppins } from "@/utils/fonts"
