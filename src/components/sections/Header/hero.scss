@@ -55,12 +55,7 @@
   .chevrondown-container {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
-
-    .chevrondown {
-      position: relative;
-      margin: 0 auto;
-    }
+    left: 50%;
+    translate: -50% 0;
   }
 }
