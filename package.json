@@ -6,7 +6,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "add-domain": "echo \"osmangund.tech\" > ./dist/CNAME",
-    "deploy": "npm run add-domain && gh-pages -d dist -t true",
+    "deploy": "npm run add-domain && gh-pages -d dist",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
