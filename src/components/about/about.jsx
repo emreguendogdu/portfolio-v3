@@ -100,7 +100,7 @@ export default function About() {
 
         <Triangle
           style={{ "--width": TRIANGLE_WIDTH, opacity: TRIANGLE_OPACITY }}
-          middle={true}
+          classes="middle"
         />
 
         <motion.div

@@ -82,7 +82,7 @@ export default function NewContact() {
               position="right"
             />
           </div>
-          <Triangle style={{ opacity: TRIANGLE_OPACITY }} middle={true} />
+          <Triangle style={{ opacity: TRIANGLE_OPACITY }} classes="middle" />
           <div className="contact-text">
             <h1>
               <a href="mailto:hello@osmangund.tech">
