@@ -17,6 +17,12 @@ footer {
     .container-links {
       display: flex;
       flex-direction: column;
+      
+      .container-link {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
 
       * {
         font-size: 1.75rem;

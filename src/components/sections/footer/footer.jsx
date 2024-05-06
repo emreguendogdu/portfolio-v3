@@ -30,17 +30,17 @@ export default function Footer() {
           <h1 className="container-title">Socials</h1>
           <div className="container-links">
             <Link href="https://www.linkedin.com/in/osmangund/">
-              <div className="flex gap-4 items-center">
+              <div className="container-link">
                 <LinkedinLogo width="24px" height="24px" /> Linkedin
               </div>
             </Link>
             <Link href="https://www.github.com/osmangund/">
-              <div className="flex gap-4 items-center">
+              <div className="container-link">
                 <GithubLogo width="24px" height="24px" /> Github
               </div>
             </Link>
             <Link href="https://www.youtube.com/@osmangund/">
-              <div className="flex gap-4 items-center">
+              <div className="container-link">
                 <YoutubeLogo width="24px" height="24px" /> Youtube
               </div>
             </Link>
