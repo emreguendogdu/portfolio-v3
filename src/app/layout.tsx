@@ -20,7 +20,7 @@ export default function RootLayout({
           <Nav />
           {children}
         </div>
-        <script type="module" src="/src/main.jsx"></script>
+        {/* <script type="module" src="/src/main.jsx"></script> */}
       </body>
     </html>
   )
