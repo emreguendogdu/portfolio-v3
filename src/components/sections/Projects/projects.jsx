@@ -1,60 +1,32 @@
+"use client"
+
 import "./projects.scss"
-import React from "react"
+import React, { useRef } from "react"
 import { projectContents } from "../../../../content/projectContents"
 import { kebabCase } from "@/utils/kebabCase"
 import { PPMonument, poppins } from "@/utils/fonts"
 import Image from "next/image"
+import { motion, useScroll, useTransform } from "framer-motion"
+import Project from "./project"
 
 export default function Projects() {
-  function Project({ title, tags, href, src, i }) {
-    return (
-      <div className={`project ${PPMonument.variable} ${poppins.variable}`}>
-        <a href={href} target="_blank" rel="noreferrer" className="project-link">
-          <div className="image-wrapper">
-            <div className="bg-image">
-              <Image
-                src={`/imagesnew/${i + 1}.png`}
-                alt={title}
-                width={752}
-                height={752}
-                blurDataURL={`/imagesnew/${i + 1}-small.png`}
-              />
-            </div>
-            <Image
-              src={`${src}.png`}
-              alt={title}
-              width={400}
-              height={500}
-              placeholder="blur"
-              blurDataURL={`${src}-small.png`}
-              className="project-image"
-            />
-          </div>
-          <div className="body">
-            <h3 className="title">{title}</h3>
-            <div className="tags">
-              {tags.map((tag, i) => (
-                <span key={`tag__${i}`} className="tag">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        </a>
-      </div>
-    )
-  }
+  const targetRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end end"],
+  })
 
   return (
     <>
       {/* <Cursor hovered={hovered} /> */}
-      <section className="projects-section">
+      <section className="projects-section" ref={targetRef}>
         <h1 className="big-title">Selected Projects (4)</h1>
         <div className="projects">
           {projectContents.map((project, i) => {
             const { title, tags, href } = project
             const kebabTitle = kebabCase(title)
             const src = `/imagesnew/${kebabTitle}`
+            const targetScale = 1 - (projectContents.length - i) * 0.05
             return (
               <React.Fragment key={`pr__${i}`}>
                 <Project
@@ -63,6 +35,9 @@ export default function Projects() {
                   href={href}
                   src={src}
                   i={i}
+                  globalProgress={scrollYProgress}
+                  range={[i * (1 / projectContents.length), 1]}
+                  targetScale={targetScale}
                 />
               </React.Fragment>
             )

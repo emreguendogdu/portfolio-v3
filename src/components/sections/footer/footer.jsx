@@ -30,9 +30,15 @@ export default function Footer() {
         <div className="container">
           <h1 className="container-title">Socials</h1>
           <div className="container-links">
-            <Link href="https://www.linkedin.com/in/osmangund/">Linkedin</Link>
-            <Link href="https://www.github.com/osmangund/">Github</Link>
-            <Link href="https://www.youtube.com/@osmangund/">Youtube</Link>
+            <Link target="_blank" href="https://www.linkedin.com/in/osmangund/">
+              Linkedin
+            </Link>
+            <Link target="_blank" href="https://www.github.com/osmangund/">
+              Github
+            </Link>
+            <Link target="_blank" href="https://www.youtube.com/@osmangund/">
+              Youtube
+            </Link>
           </div>
         </div>
         <div className="footer-bottom">

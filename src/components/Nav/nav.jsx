@@ -8,7 +8,7 @@ import { handleNavPage, handleNavSection } from "@/utils/links"
 import Link from "next/link"
 import { PPMonument, dance, inter, manrope, poppins } from "@/utils/fonts"
 import Triangle from "../triangle/triangle"
-import { motion } from "framer-motion"
+import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 
 const navTitles = [
   { title: "Projects" },
@@ -63,6 +63,10 @@ const NavLink = ({ link: { title, navSection = true }, setIsOpen }) => {
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    handleScroll()
+  }, [])
 
   return (
     <nav
