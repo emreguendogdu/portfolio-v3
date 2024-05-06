@@ -9,7 +9,7 @@ import { PPMonument } from "@/utils/fonts"
 const NAME_VARIANTS = {
   initial: {
     y: 200,
-    rotate: 15,
+    rotate: 10,
   },
   enter: (i) => ({
     opacity: 1,
@@ -25,7 +25,7 @@ const NAME_VARIANTS = {
 const TITLE_VARIANTS = {
   initial: {
     y: 100,
-    rotate: 15,
+    rotate: 10,
   },
   enter: (i) => ({
     opacity: 1,
