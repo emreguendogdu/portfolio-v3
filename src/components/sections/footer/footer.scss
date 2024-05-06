@@ -3,10 +3,17 @@ footer {
   position: relative;
   padding: 0 48px 60px 48px;
   margin-bottom: 8px;
-
   display: flex;
+  font-family: var(--font-poppins);
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
   .container {
     flex: 1;
+    padding-bottom: 24px;
     .container-title {
       font-size: 3rem;
       text-transform: uppercase;
@@ -17,7 +24,7 @@ footer {
     .container-links {
       display: flex;
       flex-direction: column;
-      
+
       .container-link {
         display: flex;
         gap: 16px;
@@ -40,6 +47,7 @@ footer {
     left: 0;
     right: 0;
     padding-inline: 48px;
+
     z-index: 99;
     font-size: 1.5rem;
     color: white;
@@ -51,6 +59,31 @@ footer {
       flex-direction: column;
       text-decoration: none;
       color: black;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 24px 60px 24px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+      text-align: center;
+      .container-title {
+        font-size: 2.5rem;
+      }
+      .container-links {
+        .container-link {
+          gap: 8px;
+        }
+      }
+    }
+    .footer-bottom {
+      padding-inline: 8px;
+      font-size: 1.25rem;
+      text-align: center;
     }
   }
 }

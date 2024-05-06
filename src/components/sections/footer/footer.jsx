@@ -3,6 +3,7 @@ import "./footer.scss"
 import { GithubLogo } from "@/components/icons/Github"
 import { LinkedinLogo } from "@/components/icons/Linkedin"
 import { YoutubeLogo } from "@/components/icons/Youtube"
+import { poppins } from "@/utils/fonts"
 
 const dateIstanbul = new Date().toLocaleString("en-US", {
   timeZone: "Asia/Istanbul",
@@ -14,7 +15,7 @@ const dateIstanbul = new Date().toLocaleString("en-US", {
 export default function Footer() {
   return (
     <>
-      <footer>
+      <footer className={`${poppins.variable}`}>
         <div className="container">
           <h1 className="container-title">Navigation</h1>
           <div className="container-links">
@@ -29,21 +30,9 @@ export default function Footer() {
         <div className="container">
           <h1 className="container-title">Socials</h1>
           <div className="container-links">
-            <Link href="https://www.linkedin.com/in/osmangund/">
-              <div className="container-link">
-                <LinkedinLogo width="24px" height="24px" /> Linkedin
-              </div>
-            </Link>
-            <Link href="https://www.github.com/osmangund/">
-              <div className="container-link">
-                <GithubLogo width="24px" height="24px" /> Github
-              </div>
-            </Link>
-            <Link href="https://www.youtube.com/@osmangund/">
-              <div className="container-link">
-                <YoutubeLogo width="24px" height="24px" /> Youtube
-              </div>
-            </Link>
+            <Link href="https://www.linkedin.com/in/osmangund/">Linkedin</Link>
+            <Link href="https://www.github.com/osmangund/">Github</Link>
+            <Link href="https://www.youtube.com/@osmangund/">Youtube</Link>
           </div>
         </div>
         <div className="footer-bottom">

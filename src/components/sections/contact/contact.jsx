@@ -53,23 +53,10 @@ export default function NewContact() {
     },
   }
 
-  useEffect(() => {
-    const CONTACT_TITLE = document.querySelector(".contact-text h1 a")
-    CONTACT_TITLE.addEventListener("mouseenter", () => {
-      TITLE_TEXT = "CLICK TO EMAIL"
-    })
-
-    return () => {
-      CONTACT_TITLE.removeEventListener("mouseenter", () => {
-        TITLE_TEXT = "CLICK TO EMAIL"
-      })
-    }
-  })
-
   return (
     <>
       <section
-        id="new-contact"
+        id="contact"
         className={`${PPMonument.variable}`}
         ref={containerRef}
       >

@@ -22,4 +22,11 @@ $linear: linear-gradient(black, transparent);
     mask-image: $linear;
     opacity: 0.01;
   }
+
+  @media only screen and (max-width: 768px) {
+    .triangle {
+      border-width: 0 calc(var(--width) / 2)
+        (calc(var(--width) * var(--width-to-height) / 2)) calc(var(--width) / 2);
+    }
+  }
 }

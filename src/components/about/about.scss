@@ -24,14 +24,12 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    
+
     h1 {
       font-size: 6rem;
       font-weight: 500;
     }
   }
-
-  
 
   color: gray;
   font-size: 6.625rem;
@@ -51,7 +49,7 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
     max-width: 1200px;
 
     .indented-text {
-      text-indent: 16rem;
+      text-indent: 160px;
     }
 
     .qualities-section {
@@ -74,10 +72,13 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
       font-size: 1.2rem;
     }
   }
-}
 
-@media only screen and (max-width: 768px) {
-  #about {
+  @media only screen and (max-width: 768px) {
+    .body {
+      .indented-text {
+        text-indent: 32px;
+      }
+    }
     .sticky {
       padding-inline: 24px;
       h1 {

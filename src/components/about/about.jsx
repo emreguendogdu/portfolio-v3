@@ -6,6 +6,7 @@ import "./about.scss"
 import { poppins } from "@/utils/fonts"
 import Triangle from "../triangle/triangle"
 import { Paragraph } from "../textopacityonscroll"
+import useMatchMedia from "@/hooks/useMatchMedia"
 
 const tl = {
   SECTION_OPACITY_END: 0.125,
@@ -24,6 +25,7 @@ export default function About() {
     target: targetRef,
     offset: ["start end", "end start"],
   })
+  const isMobile = useMatchMedia("(max-width: 768px)")
 
   const SECTION_OPACITY = useTransform(
     scrollYProgress,
@@ -63,7 +65,9 @@ export default function About() {
 
   const BODY_OPACITY = useTransform(
     scrollYProgress,
-    [tl.TRIANGLE_START, tl.TRIANGLE_START + 0.01],
+    isMobile
+      ? [tl.BODY_Y_END, tl.BODY_Y_END + 0.01]
+      : [tl.TRIANGLE_START, tl.TRIANGLE_START + 0.01],
     [0, 1]
   )
 

@@ -2,7 +2,7 @@ $mobile: 768px;
 $radial: radial-gradient(circle, rgba(255, 255, 255, 0.7) 50%, transparent 50%);
 $linear-less: linear-gradient(to bottom, black 30%, transparent);
 
-#new-contact {
+#contact {
   min-height: 200vh;
   position: relative;
 
@@ -89,22 +89,27 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
     color: white;
     transition: all 0.1s ease;
   }
-}
 
-@media only screen and (max-width: $mobile) {
-  #new-contact {
+  @media only screen and (max-width: $mobile) {
+    min-height: 100vh;
     .contact-text {
       h1 {
         font-size: 4rem;
       }
       p {
-        font-size: 1rem;
+        font-size: 2rem;
       }
     }
     .pillars {
       .pillar {
         scale: 0.3;
         top: -20%;
+        &.pillar-left {
+          translate: -45% 0;
+        }
+        &.pillar-right {
+          translate: 45% 0;
+        }
       }
     }
   }

@@ -9,7 +9,7 @@ export default function Projects() {
   function Project({ title, tags, href, src, i }) {
     return (
       <div className={`project ${PPMonument.variable} ${poppins.variable}`}>
-        <a href={href} target="_blank" rel="noreferrer">
+        <a href={href} target="_blank" rel="noreferrer" className="project-link">
           <div className="image-wrapper">
             <div className="bg-image">
               <Image
