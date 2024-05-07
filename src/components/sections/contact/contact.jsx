@@ -56,7 +56,7 @@ export default function NewContact() {
   return (
     <>
       <section
-        id="contact"
+        id="contact-section"
         className={`${PPMonument.variable}`}
         ref={containerRef}
       >
@@ -100,6 +100,7 @@ export default function NewContact() {
             </motion.p>
           </div>
         </div>
+        <div id="#contact"></div>
       </section>
       <Footer />
     </>

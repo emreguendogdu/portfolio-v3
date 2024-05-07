@@ -4,93 +4,27 @@ import { ChevronDown } from "@/components/icons/ChevronDown"
 import "./hero.scss"
 import { motion } from "framer-motion"
 import { TEXT_TO_LETTER, anim, textToLetter } from "@/utils/anims"
-import { PPMonument } from "@/utils/fonts"
+import { PPMonument, poppins } from "@/utils/fonts"
 import { LinkedinLogo } from "@/components/icons/Linkedin"
 import { GithubLogo } from "@/components/icons/Github"
 import Link from "next/link"
-
-const NAME_VARIANTS = {
-  initial: {
-    y: 200,
-    rotate: 10,
-  },
-  enter: (i) => ({
-    opacity: 1,
-    y: 0,
-    rotate: 0,
-    transition: {
-      delay: i * 0.05,
-      duration: 1,
-      ease: "easeInOut",
-    },
-  }),
-}
-const TITLE_VARIANTS = {
-  initial: {
-    y: 100,
-    rotate: 10,
-  },
-  enter: (i) => ({
-    opacity: 1,
-    y: 0,
-    rotate: 0,
-    transition: {
-      delay: 0.75 + i * 0.05,
-      duration: 1,
-      ease: "easeInOut",
-    },
-  }),
-}
-const DESCRIPTION_VARIANTS = {
-  initial: {
-    y: 100,
-    rotate: 15,
-  },
-  enter: (i) => ({
-    opacity: 1,
-    y: 0,
-    rotate: 0,
-    transition: {
-      duration: 1,
-      delay: 1,
-      ease: "easeInOut",
-    },
-  }),
-}
+import Triangle from "@/components/triangle/triangle"
 
 export default function Hero() {
   return (
     <>
-      <section id="hero" className={`${PPMonument.variable}`}>
-        <div className="text-container left">
-          <h1>{textToLetter("OSMAN EMRE GUNDOGDU", NAME_VARIANTS)}</h1>
+      <section id="hero" className={`${poppins.variable} `}>
+        <div className="div1">
+          <h1>Osman Emre Gundogdu</h1>
+          <h2>Front End Developer</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, consectetur!
+          </p>
         </div>
-        <div className="text-container right">
-          <div className="empty-container" />
-          <div className="">
-            <motion.h2>
-              {textToLetter("Front End Developer", TITLE_VARIANTS)}
-            </motion.h2>
-            <p>
-              {textToLetter(
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum saepe impedit doloribus. Consequatur eligendi doloremque adipisci distinctio est. Quibusdam, quod.",
-                DESCRIPTION_VARIANTS
-              )}
-            </p>
-          </div>
-          <div className="links-container">
-            <Link
-              target="_blank"
-              href="https://www.linkedin.com/in/osmangund/"
-            >
-              <LinkedinLogo />
-            </Link>
-            <Link target="_blank" href="https://www.github.com/osmangund/">
-              <GithubLogo />
-            </Link>
-          </div>
+        <div className="right">
+          <Triangle classes="middle" />
+          <Triangle />
         </div>
-
         <motion.div
           initial={{ y: 0 }}
           animate={{

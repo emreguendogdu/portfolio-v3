@@ -1,11 +1,5 @@
-import type { Metadata } from "next"
 import "../globals.css"
 import Nav from "@/components/Nav/nav"
-
-export const metadata: Metadata = {
-  title: "Osman Emre Gundogdu",
-  description: "Osman Emre Gundogdu | Personal website | Portfolio",
-}
 
 export default function RootLayout({
   children,

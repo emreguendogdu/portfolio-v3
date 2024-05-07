@@ -4,15 +4,17 @@
   letter-spacing: -5px;
 
   min-height: 400vh;
-  margin-top: 50vh;
+  padding-top: 4px;
+  padding-bottom: 10vh;
   margin-bottom: 15vh;
   position: relative;
 
+  background-color: var(--projects-background-color);
   .big-title {
     font-size: 6rem;
     color: white;
     text-align: left;
-    margin-block: 4rem;
+    margin-block: 6rem;
     text-indent: 4rem;
   }
 

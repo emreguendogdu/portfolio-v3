@@ -19,7 +19,7 @@ export default function Projects() {
   return (
     <>
       {/* <Cursor hovered={hovered} /> */}
-      <section className="projects-section" ref={targetRef}>
+      <section className="projects-section" id="projects" ref={targetRef}>
         <h1 className="big-title">Selected Projects (4)</h1>
         <div className="projects">
           {projectContents.map((project, i) => {

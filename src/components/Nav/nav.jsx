@@ -11,8 +11,8 @@ import Triangle from "../triangle/triangle"
 import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 
 const navTitles = [
+  { title: "Welcome", specialHref: "/#" },
   { title: "Projects" },
-  { title: "Book Notes", navSection: false },
   { title: "Contact" },
 ]
 
@@ -31,8 +31,25 @@ const handleScroll = () => {
   return () => window.removeEventListener("scroll", () => {})
 }
 
-const NavLink = ({ link: { title, navSection = true }, setIsOpen }) => {
-  if (navSection) {
+const NavLink = ({
+  link: { title, navSection = true, specialHref = false },
+  setIsOpen,
+}) => {
+  if (specialHref) {
+    return (
+      <li>
+        <Link
+          href={specialHref}
+          onClick={() => {
+            setIsOpen((isOpen) => !isOpen)
+          }}
+        >
+          {title}
+        </Link>
+      </li>
+    )
+  }
+  if (navSection && !specialHref) {
     return (
       <li>
         <Link
@@ -69,9 +86,7 @@ export default function Nav() {
   }, [])
 
   return (
-    <nav
-      className={`${manrope.variable} ${poppins.variable} ${inter.variable} ${PPMonument.variable}`}
-    >
+    <nav className={`${poppins.variable} ${PPMonument.variable}`}>
       <a id="logo" href="/" className={dance.variable}>
         OG.
       </a>

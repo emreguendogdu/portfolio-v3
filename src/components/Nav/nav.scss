@@ -7,8 +7,10 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  padding-inline: 24px;
+  padding-inline: 64px;
+  padding-block: 16px;
   font-family: var(--font-ppmonument);
+  font-family: var(--font-poppins);
   font-weight: 200;
   line-height: 2;
 
@@ -53,7 +55,9 @@ nav {
         color: white;
         font-size: 1.4rem;
         font-weight: 200;
+        font-weight: 300;
         letter-spacing: -1px;
+        letter-spacing: normal;
         line-height: 15px;
 
         transition: all 0.3s ease-in-out;

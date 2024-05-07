@@ -2,7 +2,7 @@ $mobile: 768px;
 $radial: radial-gradient(circle, rgba(255, 255, 255, 0.7) 50%, transparent 50%);
 $linear-less: linear-gradient(to bottom, black 30%, transparent);
 
-#contact {
+#contact-section {
   min-height: 200vh;
   position: relative;
 
@@ -90,8 +90,19 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
     transition: all 0.1s ease;
   }
 
+  #contact {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+  }
   @media only screen and (max-width: $mobile) {
-    min-height: 100vh;
+    min-height: 250vh;
+
+    .sticky {
+      height: 60vh;
+      top: 20%;
+    }
     .contact-text {
       h1 {
         font-size: 4rem;
@@ -103,7 +114,7 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
     .pillars {
       .pillar {
         scale: 0.3;
-        top: -20%;
+        top: -50%;
         &.pillar-left {
           translate: -45% 0;
         }
