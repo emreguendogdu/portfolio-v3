@@ -11,7 +11,7 @@ import Triangle from "../triangle/triangle"
 import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 
 const navTitles = [
-  { title: "Welcome", specialHref: "/#" },
+  { title: "Welcome", specialHref: "/#hero" },
   { title: "Projects" },
   { title: "Contact" },
 ]

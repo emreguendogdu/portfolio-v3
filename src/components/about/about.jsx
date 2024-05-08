@@ -30,7 +30,7 @@ export default function About() {
   const SECTION_OPACITY = useTransform(
     scrollYProgress,
     [0, tl.SECTION_OPACITY_END, tl.TRIANGLE_END, 0.9],
-    [0, 1, 1, 0]
+    [1, 1, 1, 0]
   )
 
   const ENTRY_OPACITY = useTransform(
