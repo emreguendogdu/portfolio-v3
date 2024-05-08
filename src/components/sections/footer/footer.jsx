@@ -21,10 +21,7 @@ export default function Footer() {
           <div className="container-links">
             <Link href="/">Home</Link>
             <Link href="/#about">About</Link>
-            <Link href="/#works">Works</Link>
-            <Link href="/#contact">Contact</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/book-notes">Book Notes</Link>
+            <Link href="/#projects">Projects</Link>
           </div>
         </div>
         <div className="container">
@@ -35,9 +32,6 @@ export default function Footer() {
             </Link>
             <Link target="_blank" href="https://www.github.com/osmangund/">
               Github
-            </Link>
-            <Link target="_blank" href="https://www.youtube.com/@osmangund/">
-              Youtube
             </Link>
           </div>
         </div>

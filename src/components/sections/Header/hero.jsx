@@ -12,7 +12,7 @@ import { poppins } from "@/utils/fonts"
 import Link from "next/link"
 import Triangle from "@/components/triangle/triangle"
 import { anim } from "@/utils/anims"
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 
 const CONTAINER_VARIANTS = {
   initial: {
