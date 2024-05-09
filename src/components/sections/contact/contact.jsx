@@ -2,7 +2,7 @@ import { PPMonument } from "@/utils/fonts"
 import "./contact.scss"
 import Pillar1 from "@/components/pillar1"
 import { useScroll, useTransform, motion } from "framer-motion"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { anim } from "@/utils/anims"
 import Pillar from "./pillar"
 import Link from "next/link"
@@ -20,12 +20,21 @@ const tl = {
 
 let TITLE_TEXT = "Contact"
 
-export default function NewContact() {
+export default function Contact() {
   const containerRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end end"],
   })
+  const [randoms, setRandoms] = useState(Array(TITLE_TEXT.length).fill(0))
+
+  useEffect(() => {
+    const randoms = []
+    for (let i = 0; i < TITLE_TEXT.length; i++) {
+      randoms.push(Math.floor(Math.random() * -175) - 75)
+    }
+    setRandoms(randoms)
+  }, [])
 
   const SMALLTEXT_OPACITY = useTransform(
     scrollYProgress,
@@ -45,16 +54,8 @@ export default function NewContact() {
     [0, 1]
   )
 
-  const LIGHT_ANIMATION = {
-    initial: { opacity: 0 },
-    enter: {
-      opacity: Math.random(), // This will generate a random opacity between 0 and 1
-      transition: { duration: 1, repeat: Infinity, repeatType: "reverse" },
-    },
-  }
-
   return (
-    <>
+    <div>
       <section
         id="contact-section"
         className={`${PPMonument.variable}`}
@@ -74,11 +75,11 @@ export default function NewContact() {
             <h1>
               <a href="mailto:hello@osmangund.tech">
                 {TITLE_TEXT.split("").map((letter, i) => {
-                  const random = Math.floor(Math.random() * -175) - 75
+                  // const random = Math.floor(Math.random() * -175) - 75
                   const PARALLAX_TEXT = useTransform(
                     scrollYProgress,
                     [tl.start, tl.BIGTEXT_PARALLAX_END],
-                    [random, 0]
+                    [randoms[i], 0]
                   )
                   return (
                     <motion.span
@@ -100,9 +101,9 @@ export default function NewContact() {
             </motion.p>
           </div>
         </div>
-        <div id="#contact"></div>
+        <div id="contact"></div>
       </section>
       <Footer />
-    </>
+    </div>
   )
 }

@@ -11,10 +11,14 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
 
 #about {
   min-height: 350vh;
-  background-color: black;
+  background-color: #0f0f0f;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   color: white;
   position: relative;
   font-family: var(--font-poppins);
+  z-index: 10;
 
   .sticky {
     position: sticky;

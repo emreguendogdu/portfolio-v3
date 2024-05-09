@@ -1,7 +1,7 @@
 .projects-section {
   font-family: var(--font-poppins);
   font-weight: 600;
-  letter-spacing: -5px;
+  letter-spacing: -4px;
 
   min-height: 400vh;
   padding-top: 4px;
@@ -28,8 +28,9 @@
   }
 
   @media only screen and (max-width: 768px) {
+    letter-spacing: -3px;
     .big-title {
-      font-size: 4rem;
+      font-size: 3.6rem;
       text-align: center;
       margin-block: 2rem;
       text-indent: 0;

@@ -5,7 +5,6 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
 #contact-section {
   min-height: 200vh;
   position: relative;
-
   font-family: var(--font-ppmonument);
 
   .sticky {
@@ -74,7 +73,7 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
     background-image: linear-gradient(
       180deg,
       transparent 50%,
-      blacks 50%
+      black 50%
     ) !important;
     transition: all 0.1s ease;
     background-size: 2px;
@@ -92,10 +91,9 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
 
   #contact {
     position: absolute;
-    top: 0;
-    height: 100vh;
-    width: 100%;
+    top: 50%;
   }
+
   @media only screen and (max-width: $mobile) {
     min-height: 250vh;
 

@@ -6,9 +6,10 @@ import "./nav.scss"
 import PropTypes from "prop-types"
 import { handleNavPage, handleNavSection } from "@/utils/links"
 import Link from "next/link"
-import { PPMonument, dance, inter, manrope, poppins } from "@/utils/fonts"
+import { dance, poppins } from "@/utils/fonts"
 import Triangle from "../triangle/triangle"
 import { motion, useMotionValueEvent, useScroll } from "framer-motion"
+import useMatchMedia from "@/hooks/useMatchMedia"
 
 const navTitles = [
   { title: "Welcome", specialHref: "/#hero" },
@@ -80,13 +81,14 @@ const NavLink = ({
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false)
+  const isMobile = useMatchMedia("(max-width: 768px)")
 
   useEffect(() => {
     handleScroll()
   }, [])
 
   return (
-    <nav className={`${poppins.variable} ${PPMonument.variable}`}>
+    <nav className={`${poppins.variable}`}>
       <a id="logo" href="/" className={dance.variable}>
         OG.
       </a>
@@ -98,11 +100,19 @@ export default function Nav() {
       >
         <Bars className="bars" />
       </div>
-      <motion.ul animate={{ left: isOpen ? "0" : "-100%" }}>
-        {navTitles?.map((link, i) => (
-          <NavLink key={i} link={link} setIsOpen={setIsOpen} />
-        ))}
-      </motion.ul>
+      {isMobile ? (
+        <motion.ul animate={{ left: isOpen ? "0" : "-100%" }}>
+          {navTitles?.map((link, i) => (
+            <NavLink key={i} link={link} setIsOpen={setIsOpen} />
+          ))}
+        </motion.ul>
+      ) : (
+        <ul>
+          {navTitles?.map((link, i) => (
+            <NavLink key={i} link={link} />
+          ))}
+        </ul>
+      )}
     </nav>
   )
 }

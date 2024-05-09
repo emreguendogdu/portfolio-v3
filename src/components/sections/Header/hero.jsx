@@ -35,7 +35,38 @@ const DELAYED_NAME_VARIANTS = {
     opacity: 1,
     transition: {
       delayChildren: 1,
-      staggerChildren: 0.25,
+      staggerChildren: 0.3,
+    },
+  },
+}
+
+const SUBTITLE_VARIANTS = {
+  initial: {
+    opacity: 0,
+    // scale: 6,
+    // y: 100,
+    transform: "perspective(1000px) translateY(0) translate3d(0, 0, 1000px)",
+  },
+  enter: {
+    opacity: 1,
+    // scale: 1,
+    // y: 0,
+    transform: "perspective(1000px) translateY(0) translate3d(0, 0, 0)",
+    transition: {
+      delayChildren: 1,
+      duration: 1.2,
+    },
+  },
+}
+
+const UNDERLINE_VARIANTS = {
+  initial: {
+    "--after-width": 0,
+  },
+  enter: {
+    "--after-width": "100%",
+    transition: {
+      duration: 0.5,
     },
   },
 }
@@ -47,7 +78,7 @@ const TEXT_VARIANTS = {
   enter: {
     opacity: 1,
     transition: {
-      duration: 0.25,
+      duration: 0.15,
     },
   },
 }
@@ -80,9 +111,15 @@ export default function Hero() {
               <motion.h1 variants={TEXT_VARIANTS} className="title">
                 Gundogdu
               </motion.h1>
-              <motion.div variants={DELAYED_NAME_VARIANTS}>
+              <motion.div className="subtitle" variants={SUBTITLE_VARIANTS}>
                 <h2>
-                  <span className="underline">Front End</span> Developer
+                  <motion.span
+                    variants={UNDERLINE_VARIANTS}
+                    className="underline"
+                  >
+                    Front End
+                  </motion.span>{" "}
+                  Developer
                 </h2>
               </motion.div>
             </motion.div>

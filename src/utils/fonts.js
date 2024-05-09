@@ -1,69 +1,58 @@
-import { Space_Grotesk, Poppins, Manrope, Inter } from "next/font/google"
+// import { Space_Grotesk, Poppins, Manrope, Inter } from "next/font/google"
+import { Poppins } from "next/font/google"
 import localFont from "next/font/local"
 
 export const dance = localFont({
   src: "../../public/fonts/Dance.otf",
   variable: "--font-dance",
+  preload: false,
 })
 
 export const PPMonument = localFont({
   src: [
-    {
-      path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-RegularItalic.otf",
-      weight: "400",
-      style: "italic",
-    },
+    // {
+    //   path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-Regular.otf",
+    //   weight: "400",
+    //   style: "normal",
+    // },
     {
       path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-Black.otf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-BlackItalic.otf",
-      weight: "700",
-      style: "italic",
-    },
-    {
       path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-Light.otf",
       weight: "200",
       style: "normal",
     },
-    {
-      path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-LightItalic.otf",
-      weight: "200",
-      style: "italic",
-    },
   ],
   variable: "--font-ppmonument",
+  preload: false,
 })
 
-export const space_grotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-})
+// export const space_grotesk = Space_Grotesk({
+//   subsets: ["latin"],
+//   variable: "--font-space-grotesk",
+//   display: "swap",
+// })
 
 export const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
   display: "swap",
-  weight: ["200", "300", "400", "500", "700"],
+  weight: ["200", "300", "400", "500", "600", "700"],
+  preload: false,
 })
 
-export const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-  weight: ["200", "300", "400", "500", "700"],
-})
+// export const inter = Inter({
+//   subsets: ["latin"],
+//   variable: "--font-inter",
+//   display: "swap",
+//   weight: ["200", "300", "400", "500", "700"],
+// })
 
-export const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  display: "swap",
-})
+// export const manrope = Manrope({
+//   subsets: ["latin"],
+//   variable: "--font-manrope",
+//   display: "swap",
+// })

@@ -1,7 +1,13 @@
 "use client"
 
 import { useRef } from "react"
-import { useScroll, motion, useTransform } from "framer-motion"
+import {
+  useScroll,
+  motion,
+  useTransform,
+  easeInOut,
+  easeOut,
+} from "framer-motion"
 import "./about.scss"
 import { poppins } from "@/utils/fonts"
 import Triangle from "../triangle/triangle"
@@ -15,8 +21,8 @@ const tl = {
   TRIANGLE_START: 0.3,
   BODY_Y_START: 0.425,
   ENTRY_OPACITY_END: 0.45,
-  BODY_Y_END: 0.625,
-  TRIANGLE_END: 0.725,
+  BODY_Y_END: 0.525,
+  TRIANGLE_END: 0.525,
 }
 
 export default function About() {
@@ -42,7 +48,7 @@ export default function About() {
   const ENTRY_Y = useTransform(
     scrollYProgress,
     [tl.ENTRY_START, tl.ENTRY_END, tl.TRIANGLE_END],
-    ["50%", "0%", "-800%"]
+    ["50%", "0%", "0%"]
   )
 
   const ENTRY_SCALE = useTransform(
@@ -74,7 +80,8 @@ export default function About() {
   const BODY_Y = useTransform(
     scrollYProgress,
     [tl.BODY_Y_START, tl.BODY_Y_END],
-    ["210%", "0%"]
+    ["210%", "0%"],
+    { ease: easeOut }
   )
 
   const BODY_TEXT_GRADIENT_OPACITY = useTransform(

@@ -4,7 +4,6 @@ import "./project.scss"
 import React, { useRef } from "react"
 import { projectContents } from "../../../../content/projectContents"
 import { kebabCase } from "@/utils/kebabCase"
-import { PPMonument, poppins } from "@/utils/fonts"
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import useMatchMedia from "@/hooks/useMatchMedia"
@@ -32,7 +31,7 @@ export default function Project({
   return (
     <div className="project" ref={projectTargetRef}>
       <motion.div
-        className={`project-content ${PPMonument.variable} ${poppins.variable}`}
+        className={`project-content`}
         style={{
           scale: CARD_SCALE,
           top: isMobile

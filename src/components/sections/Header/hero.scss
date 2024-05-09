@@ -1,5 +1,6 @@
 #hero {
   margin-bottom: -100vh;
+  position: relative;
   .empty-container {
     height: 100vh;
   }
@@ -9,13 +10,14 @@
     height: 100vh;
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: flex-end;
     font-family: var(--font-poppins);
     text-align: center;
 
     position: sticky;
     top: 0;
 
+    overflow: hidden;
     h1,
     h2,
     p,
@@ -27,25 +29,23 @@
     h2 {
       line-height: 1;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 700;
+      margin: 0;
+      user-select: none;
     }
     div {
       width: 100%;
     }
-    h1,
     .title {
       text-transform: uppercase;
       display: inline-block;
       margin: 0;
       font-size: 20rem;
-      font-weight: 700;
     }
 
     h2 {
       font-size: 6.3rem;
       letter-spacing: -1px;
-      margin: 0;
-      // font-weight: 500;
       margin-top: 30px;
       margin-bottom: 20px;
     }
@@ -65,7 +65,7 @@
 
     .underline::after {
       content: "";
-      width: 100%;
+      width: var(--after-width);
       height: 24px;
       background-image: url("/images/svgs/smallunderline.svg");
       position: absolute;
@@ -75,8 +75,10 @@
       bottom: 0;
     }
 
-    .triangle-container {
+    .subtitle {
+      position: relative;
     }
+
     .chevrondown-container {
       position: absolute;
       bottom: 0;
@@ -90,31 +92,12 @@
       text-align: center;
       justify-content: center;
 
-      .text-container {
-        max-width: auto;
-        justify-content: center;
-        text-align: center;
-        margin: 0;
-        &.left {
-          padding-bottom: 0;
-        }
-        &.right {
-          align-items: center;
-          text-align: center;
-          .links-container {
-            svg {
-              width: 32px;
-              height: 32px;
-            }
-          }
-        }
-      }
-      h1 {
-        font-size: 5rem;
+      .title {
+        font-size: 5.8rem;
         margin: 0;
       }
       h2 {
-        font-size: 4.2rem;
+        font-size: 4rem;
         line-height: 1.2;
       }
 

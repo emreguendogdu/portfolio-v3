@@ -9,12 +9,11 @@ nav {
   right: 0;
   padding-inline: 64px;
   padding-block: 16px;
-  font-family: var(--font-ppmonument);
   font-family: var(--font-poppins);
   font-weight: 200;
   line-height: 2;
 
-  z-index: 3;
+  z-index: 99999;
   transition: 350ms ease-in-out;
   background-color: var(--background-color);
 

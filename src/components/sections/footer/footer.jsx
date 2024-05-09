@@ -4,15 +4,17 @@ import { GithubLogo } from "@/components/icons/Github"
 import { LinkedinLogo } from "@/components/icons/Linkedin"
 import { YoutubeLogo } from "@/components/icons/Youtube"
 import { poppins } from "@/utils/fonts"
-
-const dateIstanbul = new Date().toLocaleString("en-US", {
-  timeZone: "Asia/Istanbul",
-  hour: "2-digit",
-  minute: "2-digit",
-  hour12: true,
-})
+import { useEffect, useState } from "react"
 
 export default function Footer() {
+  const [date, setDate] = useState(
+    new Date().toLocaleString("en-US", {
+      timeZone: "Asia/Istanbul",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    })
+  )
   return (
     <>
       <footer className={`${poppins.variable}`}>
@@ -37,7 +39,7 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <div>
-            <p>{dateIstanbul.toString()}, GMT+3 / Izmir, Turkey</p>
+            <p>{date.toString()}, GMT+3 / Izmir, Turkey</p>
           </div>
           <div className="links"></div>
           <p>Made with 💗 by osmangund®</p>

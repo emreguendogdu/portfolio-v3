@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 import { curve, slide, text } from "./anims"
 import "./PreLoader.scss"
-import { space_grotesk } from "@/utils/fonts"
+import { poppins } from "@/utils/fonts"
 
 export default function PreLoader({ children }: any) {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
@@ -33,7 +33,7 @@ export default function PreLoader({ children }: any) {
   return (
     <div
       id="preloader"
-      className={`${space_grotesk.variable} ${isVisible ? "" : "hidden"}`}
+      className={`${poppins.variable} ${isVisible ? "" : "hidden"}`}
     >
       <motion.p {...anim(text)} onAnimationComplete={hidePreLoader}>
         Osman Emre Gundogdu
