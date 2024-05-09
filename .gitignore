@@ -1,6 +1,6 @@
 .env
 public/*.glb
-
+public/3dobjs
 # Logs
 logs
 *.log

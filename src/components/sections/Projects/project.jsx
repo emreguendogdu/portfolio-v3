@@ -48,7 +48,7 @@ export default function Project({
           <div className="image-wrapper">
             <motion.div className="bg-image" style={{ scale: IMAGE_SCALE }}>
               <Image
-                src={`/imagesnew/${i + 1}.png`}
+                src={`/images/projects/${i + 1}.webp`}
                 alt={title}
                 fill
                 priority={true}
@@ -59,12 +59,10 @@ export default function Project({
               style={{ scale: IMAGE_SCALE }}
             >
               <Image
-                src={`${src}.png`}
+                src={`${src}`}
                 alt={title}
                 width={400}
                 height={500}
-                placeholder="blur"
-                blurDataURL={`${src}-small.png`}
                 className="project-image"
               />
             </motion.div>
