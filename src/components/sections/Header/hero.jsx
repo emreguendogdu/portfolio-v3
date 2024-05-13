@@ -14,6 +14,11 @@ import Triangle from "@/components/triangle/triangle"
 import { anim } from "@/utils/anims"
 import { useRef } from "react"
 
+const randomValues = Array.from(
+  { length: 10 },
+  () => Math.floor(Math.random() * (1000 - 500 + 1)) + 500
+)
+
 const CONTAINER_VARIANTS = {
   initial: {
     opacity: 0,
@@ -43,15 +48,13 @@ const DELAYED_NAME_VARIANTS = {
 const SUBTITLE_VARIANTS = {
   initial: {
     opacity: 0,
-    // scale: 6,
-    // y: 100,
-    transform: "perspective(1000px) translateY(0) translate3d(0, 0, 1000px)",
+    filter: "blur(12px)",
+    transform: "perspective(1000px) translate3d(0, 0, 1000px)",
   },
   enter: {
     opacity: 1,
-    // scale: 1,
-    // y: 0,
-    transform: "perspective(1000px) translateY(0) translate3d(0, 0, 0)",
+    filter: "blur(0px)",
+    transform: "perspective(1000px) translate3d(0, 0, 0)",
     transition: {
       delayChildren: 1,
       duration: 1.2,
@@ -140,7 +143,7 @@ export default function Hero() {
             <ChevronDown width="64px" height="64px" className="chevrondown" />
           </motion.div>
         </div>
-        <div className="empty-container"></div>
+        <div className="empty-container" />
       </motion.section>
     </>
   )
