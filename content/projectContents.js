@@ -15,8 +15,7 @@ export const projectContents = [
   {
     title: "Zen Tattoo",
     tags: ["React", "Next.js", "framer-motion"],
-    // href: "https://zen-tattoo.vercel.app/",
-    href: "http://localhost:3000/",
+    href: "https://zen-tattoo.vercel.app/",
   },
   {
     title: "Data Visualization Projects",
