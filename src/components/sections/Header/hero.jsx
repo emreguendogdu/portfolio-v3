@@ -105,14 +105,17 @@ export default function Hero() {
         <div className="hero-content">
           <motion.div {...anim(CONTAINER_VARIANTS)}>
             <motion.div {...anim(DELAYED_NAME_VARIANTS)}>
-              <motion.h1 variants={TEXT_VARIANTS} className="title">
-                Osman&nbsp;
-              </motion.h1>
-              <motion.h1 variants={TEXT_VARIANTS} className="title circle">
-                Emre&nbsp;
-              </motion.h1>
-              <motion.h1 variants={TEXT_VARIANTS} className="title">
-                Gundogdu
+              <motion.h1>
+                <motion.span variants={TEXT_VARIANTS} className="title">
+                  Osman&nbsp;
+                </motion.span>
+
+                <motion.span variants={TEXT_VARIANTS} className="title">
+                  Emre&nbsp;
+                </motion.span>
+                <motion.span variants={TEXT_VARIANTS} className="title">
+                  Gundogdu
+                </motion.span>
               </motion.h1>
               <motion.div className="subtitle" variants={SUBTITLE_VARIANTS}>
                 <h2>

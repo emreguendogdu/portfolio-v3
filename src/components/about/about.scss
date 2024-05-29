@@ -35,8 +35,9 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
     }
   }
 
-  color: gray;
-  font-size: 6.625rem;
+  color: hsl(0, 0%, 55%);
+  text-shadow: 0.5px 0.5px 0.5px black;
+  font-size: 6.6rem;
   font-weight: 200;
   line-height: 1;
 
@@ -53,7 +54,7 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
     max-width: 1200px;
 
     .indented-text {
-      text-indent: 160px;
+      text-indent: 64px;
     }
 
     .qualities-section {

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://osmangund.tech
+
+# Sitemaps
+Sitemap: https://osmangund.tech/sitemap.xml

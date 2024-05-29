@@ -68,30 +68,57 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
     }
   }
 
+  // a {
+  //   background-position-y: -0%;
+  //   background-image: linear-gradient(
+  //     180deg,
+  //     transparent 50%,
+  //     black 50%
+  //   ) !important;
+  //   transition: all 0.1s ease;
+  //   background-size: 2px;
+  //   background-size: auto 190%;
+  //   padding: 3px 0;
   a {
-    background-position-y: -0%;
-    background-image: linear-gradient(
-      180deg,
-      transparent 50%,
-      black 50%
-    ) !important;
-    transition: all 0.1s ease;
-    background-size: 2px;
-    background-size: auto 190%;
-    padding: 3px 0;
     text-decoration: none;
     color: inherit;
   }
+  // }
 
-  a:hover {
-    background-position-y: 100%;
-    color: white;
-    transition: all 0.1s ease;
-  }
+  // a:hover {
+  //   background-position-y: 100%;
+  //   color: white;
+  //   transition: all 0.1s ease;
+  // }
 
   #contact {
     position: absolute;
     top: 50%;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    li {
+      display: inline-block;
+      padding: 0.5rem;
+      position: relative;
+
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.1s ease;
+      font-size: 2rem;
+
+      a:hover {
+        color: var(--primary-color);
+        font-size: 2.1rem;
+        transition: all 0.25s ease;
+      }
+    }
   }
 
   @media only screen and (max-width: $mobile) {

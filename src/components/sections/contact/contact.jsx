@@ -95,10 +95,36 @@ export default function Contact() {
                 })}
               </a>
             </h1>
-            <motion.p style={{ opacity: SMALLTEXT_OPACITY }}>
+            {/* <motion.p style={{ opacity: SMALLTEXT_OPACITY }}>
               Click on contact, write down your ideas and let&apos;s create a
               masterpiece together.
-            </motion.p>
+            </motion.p> */}
+            <ul>
+              <li>
+                <Link
+                  href="
+                mailto:hello@osmangund.tech?subject=I have an idea about...&body=Hi Osman, I found your website and I have an idea about..."
+                >
+                  email
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="
+                https://www.linkedin.com/in/osmangund/"
+                >
+                  linkedin
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="
+                https://www.github.com/osmangund/"
+                >
+                  github
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
         <div id="contact"></div>

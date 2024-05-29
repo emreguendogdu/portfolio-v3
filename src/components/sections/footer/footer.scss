@@ -12,7 +12,9 @@ footer {
     display: inline-block;
     width: fit-content;
     &:hover {
-      color: lightblue;
+      color: var(--primary-color);
+      font-size: 2.1rem;
+      transition: all 0.25s ease;
     }
   }
 

@@ -8,6 +8,7 @@
   --preloader-second-color: #734b6d;
   --preloader-second-color: #243b55;
   --projects-background-color: black;
+  --primary-color: #87ceeb;
 
   color: rgba(255, 255, 255, 0.87);
   background-color: var(--background-color);
