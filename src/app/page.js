@@ -1,6 +1,5 @@
 import "@/globals.css"
 import App from "@/App"
-import SEO from "@/components/SEO"
 
 export const metadata = {
   title: "Osman Gundogdu - Front End Developer",
