@@ -1,6 +1,6 @@
 {
-  "homepage": "https://osmangund.github.io",
-  "name": "osmangund.github.io",
+  "description": "Personal Website",
+  "name": "osmangund.tech",
   "private": true,
   "version": "0.0.0",
   "scripts": {
