@@ -1,6 +1,7 @@
 import "@/globals.css"
 import App from "@/App"
 import Script from "next/script"
+import GoogleAnalytics from "@/components/GoogleAnalytics"
 
 export const metadata = {
   title: "Osman Emre Gundogdu —— Front End Developer",
@@ -29,29 +30,14 @@ export default function MyApp() {
   return (
     <>
       <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
         <Script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </Script>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-05DFD1XVZ2"
-        ></Script>
-        <Script id="google-analytics">
-          {`
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-05DFD1XVZ2');
-  `}
-        </Script>
       </head>
-      <main>
+      <GoogleAnalytics />
+      <body>
         <App />
-      </main>
+      </body>
     </>
   )
 }

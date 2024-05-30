@@ -55,7 +55,7 @@ export default function Contact() {
   )
 
   return (
-    <div>
+    <>
       <section
         id="contact-section"
         className={`${PPMonument.variable}`}
@@ -130,6 +130,6 @@ export default function Contact() {
         <div id="contact"></div>
       </section>
       <Footer />
-    </div>
+    </>
   )
 }

@@ -1,7 +1,6 @@
 "use client"
 
 import { LazyMotion, domAnimation } from "framer-motion"
-import { poppins } from "@/utils/fonts"
 import Contact from "./components/sections/contact/contact"
 import About from "./components/about/about"
 import Projects from "./components/sections/Projects/projects"
@@ -11,11 +10,9 @@ export default function App() {
   return (
     <>
       <LazyMotion features={domAnimation}>
-        <main className={`${poppins.variable}`}>
-          <Hero />
-          <About />
-          <Projects />
-        </main>
+        <Hero />
+        <About />
+        <Projects />
         <Contact />
       </LazyMotion>
     </>
