@@ -1,10 +1,11 @@
 import "@/globals.css"
 import App from "@/App"
+import Script from "next/script"
 
 export const metadata = {
-  title: "Osman Gundogdu - Front End Developer",
+  title: "Osman Emre Gundogdu —— Front End Developer",
   description:
-    "Osman Emre Gündoğdu is a software engineer who specializes in creating and designing remarkable digital experiences.",
+    "Osman Emre Gündoğdu is a front end developer and web designer who specializes in creating and designing remarkable digital experiences to help people all around the world.",
   keywords:
     "Osman Emre Gundogdu, Osman Emre Gündoğdu, Osman Gündoğdu, Gündoğdu, Emre Gündoğdu, Osman, Emre, Gundogdu, Gündoğdu, Frontend, Developer, Web, Portfolio, Personal, Website, Book, Notes, Software, Engineer, Front, End, Full, Fullstack, Stack, osmangund, Canother, wyarn, osmangund.github.io",
 }
@@ -31,9 +32,22 @@ export default function MyApp() {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
-        <script type="application/ld+json">
+        <Script type="application/ld+json">
           {JSON.stringify(structuredData)}
-        </script>
+        </Script>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-05DFD1XVZ2"
+        ></Script>
+        <Script id="google-analytics">
+          {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-05DFD1XVZ2');
+  `}
+        </Script>
       </head>
       <main>
         <App />

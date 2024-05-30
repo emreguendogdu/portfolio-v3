@@ -61,7 +61,7 @@ export default function Project({
               <Image
                 src={`${src}`}
                 alt={title}
-                width„={400}
+                width={400}
                 height={500}
                 className="project-image"
               />
