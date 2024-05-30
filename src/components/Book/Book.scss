@@ -18,7 +18,7 @@ section.book-section {
     width: 50vw;
 
     align-content: center;
-    h4.book-date {
+    .book-date {
       font-weight: 300;
       font-size: 1.5rem;
     }
@@ -30,13 +30,13 @@ section.book-section {
     li.quote {
       margin-block-end: 2rem;
     }
-    h1.book-title {
+    .book-title {
       font-size: 4rem;
       font-weight: 500;
       text-transform: uppercase;
       margin: 1.5rem 0;
     }
-    h3 {
+    .actionable-steps-title {
       font-size: 2.5rem;
       font-weight: 500;
       margin: 0;
@@ -77,10 +77,10 @@ section.book-section {
     padding-inline: 1.5rem;
     article.book {
       width: 100%;
-      h1.book-title {
+      .book-title {
         font-size: 2.5rem;
       }
-      h3 {
+      .actionable-steps-title {
         font-size: 2rem;
       }
       ul.quotes {

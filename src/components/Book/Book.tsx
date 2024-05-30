@@ -19,11 +19,11 @@ export default function Book({
   return (
     <section className={`book-section ${poppins.variable}`}>
       <article className="book">
-        <h4 className="book-date">{date}</h4>
-        <h1 className="book-title">{title}</h1>
+        <p className="book-date">{date}</p>
+        <p className="book-title">{title}</p>
         <p className="book-impressions">{impressions}</p>
 
-        <h3>Actionable steps:</h3>
+        <h3 className="actionable-steps-title">Actionable steps:</h3>
         <ul className="actionable-steps">
           {actionableSteps?.map((step, index) => (
             <li key={index} className="actionable-step">

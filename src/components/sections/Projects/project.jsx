@@ -68,7 +68,7 @@ export default function Project({
             </motion.div>
           </div>
           <div className="body">
-            <h3 className="title">{title}</h3>
+            <h1 className="title">{title}</h1>
             <div className="tags">
               {tags.map((tag, i) => (
                 <span key={`tag__${i}`} className="tag">
