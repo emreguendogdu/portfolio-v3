@@ -13,21 +13,28 @@ export default function MyApp() {
   const structuredData = {
     "@context": "http://schema.org",
     "@type": "Person",
-    name: "Osman Emre Gundogdu",
+    name: "Osman Emre Gündoğdu",
+    jobTitle: "Front End Developer",
     url: "https://www.osmangund.tech",
     sameAs: [
       "https://www.linkedin.com/in/osmangund",
       "https://twitter.com/osmangund",
       "https://github.com/osmangund",
     ],
+    description:
+      "Osman Emre Gündoğdu is a software engineer who specializes in creating and designing remarkable digital experiences.",
   }
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </head>
       <main>
         <App />
       </main>
