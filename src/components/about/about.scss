@@ -79,7 +79,11 @@ $linear-less: linear-gradient(to bottom, black 30%, transparent);
   }
 
   @media only screen and (max-width: 768px) {
+    .entry {
+      text-align: center;
+    }
     .body {
+      text-align: center;
       .indented-text {
         text-indent: 32px;
       }

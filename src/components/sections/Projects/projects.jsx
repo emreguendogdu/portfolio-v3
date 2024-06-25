@@ -7,6 +7,7 @@ import { kebabCase } from "@/utils/kebabCase"
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Project from "./project"
+import { poppins } from "@/utils/fonts"
 
 export default function Projects() {
   const targetRef = useRef(null)
@@ -18,7 +19,11 @@ export default function Projects() {
   return (
     <>
       {/* <Cursor hovered={hovered} /> */}
-      <section className="projects-section" id="projects" ref={targetRef}>
+      <section
+        className={`projects-section ${poppins.variable}`}
+        id="projects"
+        ref={targetRef}
+      >
         <h1 className="big-title">Selected Projects (4)</h1>
         <div className="projects">
           {projectContents.map((project, i) => {

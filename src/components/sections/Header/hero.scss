@@ -5,12 +5,12 @@
     height: 100vh;
   }
   .hero-content {
-    padding-block: 128px;
     padding-inline: 24px;
+    padding-block: 128px;
     height: 100vh;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     font-family: var(--font-poppins);
     text-align: center;
 
@@ -40,11 +40,11 @@
       text-transform: uppercase;
       display: inline-block;
       margin: 0;
-      font-size: 20rem;
+      font-size: clamp(5.8rem, 12vw, 20rem);
     }
 
     h2 {
-      font-size: 6.3rem;
+      font-size: clamp(4rem, 5vw, 10rem);
       letter-spacing: -1px;
       margin-top: 30px;
       margin-bottom: 20px;
@@ -66,13 +66,13 @@
     .underline::after {
       content: "";
       width: var(--after-width);
-      height: 24px;
+      height: clamp(12px, 5vw, 48px);
       background-image: url("/images/svgs/smallunderline.svg");
       position: absolute;
       background-position: center;
       background-repeat: no-repeat;
       left: 0;
-      bottom: 0;
+      bottom: -10px;
     }
 
     .subtitle {
@@ -96,11 +96,9 @@
       justify-content: center;
 
       .title {
-        font-size: 5.8rem;
         margin: 0;
       }
       h2 {
-        font-size: 4rem;
         line-height: 1.2;
       }
 
