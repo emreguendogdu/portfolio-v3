@@ -9,6 +9,7 @@ import {
   easeOut,
 } from "framer-motion"
 import "./about.scss"
+import "../../globals.css"
 import { poppins } from "@/utils/fonts"
 import Triangle from "../triangle/triangle"
 import { Paragraph } from "../textopacityonscroll"
