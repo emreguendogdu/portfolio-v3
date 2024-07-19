@@ -33,3 +33,8 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.logo {
+  filter: invert(94%) sepia(0%) saturate(7468%) hue-rotate(72deg)
+    brightness(108%) contrast(108%);
+}

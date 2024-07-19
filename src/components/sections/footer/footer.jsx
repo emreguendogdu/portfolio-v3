@@ -18,8 +18,12 @@ export default function Footer() {
   return (
     <>
       <footer className={`${poppins.variable}`}>
+        <div className="container logo-container">
+          <img src="/logo.svg" alt="" className="logo" />
+        </div>
+        <div className="container empty-container"></div>
         <div className="container">
-          <h1 className="container-title">Navigation</h1>
+          <h2 className="container-title">Navigation</h2>
           <div className="container-links">
             <Link href="/">Home</Link>
             <Link href="/ajans">Ajans</Link>
@@ -28,7 +32,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="container">
-          <h1 className="container-title">Socials</h1>
+          <h2 className="container-title">Socials</h2>
           <div className="container-links">
             <Link target="_blank" href="https://www.linkedin.com/in/osmangund/">
               Linkedin
@@ -42,8 +46,9 @@ export default function Footer() {
           <div>
             <p>{date.toString()} - GMT+3, Turkey</p>
           </div>
-          <div className="links"></div>
-          2024 ® All rights reserved
+          <div>
+            <p>2024 ® All rights reserved</p>
+          </div>
         </div>
       </footer>
     </>
