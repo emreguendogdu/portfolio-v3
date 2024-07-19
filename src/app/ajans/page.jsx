@@ -5,7 +5,7 @@ import "@/globals.css"
 import Nav from "@/components/Nav/nav"
 import Footer from "@/components/sections/footer/footer"
 import { poppins } from "@/utils/fonts"
-import { useEffect } from "react"
+import React, { useEffect } from "react"
 
 function TemplateDemo({ data }) {
   return (
@@ -68,11 +68,13 @@ export default function page() {
           {Array.from({ length: 6 }).map((item, i) => {
             i += 1
             return (
-              <DesignDemo
-                data={{
-                  src: `/images/design-challenges/dchlng-${i}.webp`,
-                }}
-              />
+              <React.Fragment key={i}>
+                <DesignDemo
+                  data={{
+                    src: `/images/design-challenges/dchlng-${i}.webp`,
+                  }}
+                />
+              </React.Fragment>
             )
           })}
         </ul>
@@ -87,7 +89,7 @@ export default function page() {
           >
             bu linke tıklayarak{" "}
           </a>
-          Notion sayfasında görebilirsiniz.
+          Notion sayfasında görüntüleyebilirsiniz.
         </h2>
       </section>
       <Footer />

@@ -22,6 +22,7 @@ export default function Footer() {
           <h1 className="container-title">Navigation</h1>
           <div className="container-links">
             <Link href="/">Home</Link>
+            <Link href="/ajans">Ajans</Link>
             <Link href="/#about">About</Link>
             <Link href="/#projects">Projects</Link>
           </div>
@@ -39,10 +40,10 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <div>
-            <p>{date.toString()}, GMT+3 / Izmir, Turkey</p>
+            <p>{date.toString()} - GMT+3, Turkey</p>
           </div>
           <div className="links"></div>
-          <p>Made with 💗 by osmangund®</p>
+          2024 ® All rights reserved
         </div>
       </footer>
     </>
