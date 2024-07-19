@@ -21,25 +21,31 @@ export default function Footer() {
         <div className="container logo-container">
           <img src="/logo.svg" alt="" className="logo" />
         </div>
-        <div className="container empty-container"></div>
-        <div className="container">
-          <h2 className="container-title">Navigation</h2>
-          <div className="container-links">
-            <Link href="/">Home</Link>
-            <Link href="/ajans">Ajans</Link>
-            <Link href="/#about">About</Link>
-            <Link href="/#projects">Projects</Link>
+        <div className="nav-container">
+          {" "}
+          <div className="container empty-container"></div>
+          <div className="container">
+            <h2 className="container-title">Navigation</h2>
+            <div className="container-links">
+              <Link href="/">Home</Link>
+              <Link href="/ajans">Ajans</Link>
+              <Link href="/#about">About</Link>
+              <Link href="/#projects">Projects</Link>
+            </div>
           </div>
-        </div>
-        <div className="container">
-          <h2 className="container-title">Socials</h2>
-          <div className="container-links">
-            <Link target="_blank" href="https://www.linkedin.com/in/osmangund/">
-              Linkedin
-            </Link>
-            <Link target="_blank" href="https://www.github.com/osmangund/">
-              Github
-            </Link>
+          <div className="container">
+            <h2 className="container-title">Socials</h2>
+            <div className="container-links">
+              <Link
+                target="_blank"
+                href="https://www.linkedin.com/in/osmangund/"
+              >
+                Linkedin
+              </Link>
+              <Link target="_blank" href="https://www.github.com/osmangund/">
+                Github
+              </Link>
+            </div>
           </div>
         </div>
         <div className="footer-bottom">

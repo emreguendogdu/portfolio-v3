@@ -6,6 +6,11 @@ footer {
   display: flex;
   font-family: var(--font-poppins);
 
+  .nav-container {
+    display: flex;
+    gap: 16px;
+  }
+
   a {
     color: white;
     text-decoration: none;
@@ -81,10 +86,26 @@ footer {
   @media only screen and (max-width: 768px) {
     padding: 0 24px 60px 24px;
     gap: 24px;
+    flex-direction: column;
 
     .container {
+      text-align: center;
+      .container-links {
+        align-items: center;
+      }
+      &.logo-container {
+        display: flex;
+        justify-content: center;
+        .logo {
+          width: 50%;
+          height: 50%;
+        }
+      }
+      &.empty-container {
+        display: none;
+      }
       .container-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
       .container-links {
         .container-link {
