@@ -2,10 +2,15 @@ body {
   background-color: black;
   margin: 0;
   #ajans {
-    margin-top: 10vh;
+    margin: 10vh 0;
     min-height: 100vh;
     font-family: var(--font-poppins);
     padding: 0 72px;
+    color: white;
+
+    h1 {
+      font-size: 3rem;
+    }
     a {
       text-decoration: none;
       color: white;
@@ -13,23 +18,27 @@ body {
         color: #678ed5;
       }
     }
+
     h2.notion-title {
       margin-top: 48px;
     }
+
     ul {
       list-style: none;
       display: flex;
+      flex-wrap: wrap;
       margin: 0;
       padding: 0;
+      gap: 12px;
 
       h2 {
         transition: all 0.3s ease-in-out;
       }
-      a {
-        flex: 1;
+
+      .ul-item {
+        width: calc(33% - 12px);
         max-width: 33%;
         position: relative;
-        overflow: hidden;
         transition: all 1s ease-in-out;
         &:hover {
           filter: brightness(140%);
@@ -37,12 +46,10 @@ body {
             letter-spacing: 1px;
           }
         }
-        li {
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: scale-down;
-          }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: scale-down;
         }
       }
     }
