@@ -23,7 +23,6 @@ export default function Footer() {
         </div>
         <div className="nav-container">
           {" "}
-          <div className="container empty-container"></div>
           <div className="container">
             <h2 className="container-title">Navigation</h2>
             <div className="container-links">

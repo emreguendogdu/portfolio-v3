@@ -1,14 +1,15 @@
 footer {
   width: 100%;
   position: relative;
-  padding: 0 48px 60px 48px;
+  padding: 0 48px 96px 48px;
   margin-bottom: 8px;
   display: flex;
   font-family: var(--font-poppins);
+  justify-content: space-between;
 
   .nav-container {
     display: flex;
-    gap: 16px;
+    gap: 64px;
   }
 
   a {
@@ -24,7 +25,6 @@ footer {
   }
 
   .container {
-    flex: 1;
     padding-bottom: 24px;
     .container-title {
       font-size: 3rem;
@@ -53,8 +53,13 @@ footer {
       }
     }
 
+    &.nav-container {
+      width: 70%;
+    }
+
     &.logo-container {
       position: relative;
+      width: 30%;
       .logo {
         width: 100%;
         height: 100%;
@@ -90,19 +95,18 @@ footer {
 
     .container {
       text-align: center;
+      width: 100%;
       .container-links {
         align-items: center;
       }
       &.logo-container {
         display: flex;
         justify-content: center;
+        width: 100%;
         .logo {
-          width: 50%;
-          height: 50%;
+          width: 75%;
+          height: 75%;
         }
-      }
-      &.empty-container {
-        display: none;
       }
       .container-title {
         font-size: 2rem;
