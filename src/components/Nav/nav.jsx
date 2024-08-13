@@ -13,7 +13,7 @@ import useMatchMedia from "@/hooks/useMatchMedia"
 
 const navTitles = [
   { title: "Welcome", specialHref: "/#hero" },
-  { title: "Ajans", specialHref: "/ajans" },
+  { title: "Ajans", specialHref: "https://laodikyaweb.com" },
   { title: "Projects" },
   { title: "Contact" },
 ]

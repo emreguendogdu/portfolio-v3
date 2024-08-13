@@ -27,7 +27,7 @@ export default function Footer() {
             <h2 className="container-title">Navigation</h2>
             <div className="container-links">
               <Link href="/">Home</Link>
-              <Link href="/ajans">Ajans</Link>
+              <Link href="https://laodikyaweb.com">Ajans</Link>
               <Link href="/#about">About</Link>
               <Link href="/#projects">Projects</Link>
             </div>
