@@ -1,10 +1,10 @@
-import Link from "next/link"
-import "./footer.scss"
-import { GithubLogo } from "@/components/icons/Github"
-import { LinkedinLogo } from "@/components/icons/Linkedin"
-import { YoutubeLogo } from "@/components/icons/Youtube"
-import { poppins } from "@/utils/fonts"
-import { useEffect, useState } from "react"
+import Link from "next/link";
+import "./footer.scss";
+import { GithubLogo } from "@/components/icons/Github";
+import { LinkedinLogo } from "@/components/icons/Linkedin";
+import { YoutubeLogo } from "@/components/icons/Youtube";
+import { poppins } from "@/utils/fonts";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
   const [date, setDate] = useState(
@@ -13,8 +13,8 @@ export default function Footer() {
       hour: "2-digit",
       minute: "2-digit",
       hour12: true,
-    })
-  )
+    }),
+  );
   return (
     <>
       <footer className={`${poppins.variable}`}>
@@ -27,7 +27,7 @@ export default function Footer() {
             <h2 className="container-title">Navigation</h2>
             <div className="container-links">
               <Link href="/">Home</Link>
-              <Link href="https://laodikyaweb.com">Ajans</Link>
+              <Link href="https://laodikyaweb.com">Agency</Link>
               <Link href="/#about">About</Link>
               <Link href="/#projects">Projects</Link>
             </div>
@@ -57,5 +57,5 @@ export default function Footer() {
         </div>
       </footer>
     </>
-  )
+  );
 }

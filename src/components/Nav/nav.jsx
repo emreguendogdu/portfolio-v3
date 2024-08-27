@@ -1,37 +1,37 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { Bars } from "../icons/Bars"
-import "./nav.scss"
-import PropTypes from "prop-types"
-import { handleNavPage, handleNavSection } from "@/utils/links"
-import Link from "next/link"
-import { dance, poppins } from "@/utils/fonts"
-import Triangle from "../triangle/triangle"
-import { motion, useMotionValueEvent, useScroll } from "framer-motion"
-import useMatchMedia from "@/hooks/useMatchMedia"
+import { useEffect, useState } from "react";
+import { Bars } from "../icons/Bars";
+import "./nav.scss";
+import PropTypes from "prop-types";
+import { handleNavPage, handleNavSection } from "@/utils/links";
+import Link from "next/link";
+import { dance, poppins } from "@/utils/fonts";
+import Triangle from "../triangle/triangle";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import useMatchMedia from "@/hooks/useMatchMedia";
 
 const navTitles = [
   { title: "Welcome", specialHref: "/#hero" },
-  { title: "Ajans", specialHref: "https://laodikyaweb.com" },
+  { title: "Agency", specialHref: "https://laodikyaweb.com" },
   { title: "Projects" },
   { title: "Contact" },
-]
+];
 
 const handleScroll = () => {
-  let prevScrollPos = window.scrollY
+  let prevScrollPos = window.scrollY;
   window.addEventListener("scroll", () => {
-    const nav = document.querySelector("nav")
-    const currentScrollPos = window.scrollY
+    const nav = document.querySelector("nav");
+    const currentScrollPos = window.scrollY;
 
     prevScrollPos < currentScrollPos
       ? nav?.classList.add("hide")
-      : nav?.classList.remove("hide")
+      : nav?.classList.remove("hide");
 
-    prevScrollPos = currentScrollPos
-  })
-  return () => window.removeEventListener("scroll", () => {})
-}
+    prevScrollPos = currentScrollPos;
+  });
+  return () => window.removeEventListener("scroll", () => {});
+};
 
 const NavLink = ({
   link: { title, navSection = true, specialHref = false },
@@ -43,13 +43,13 @@ const NavLink = ({
         <Link
           href={specialHref}
           onClick={() => {
-            setIsOpen((isOpen) => !isOpen)
+            setIsOpen((isOpen) => !isOpen);
           }}
         >
           {title}
         </Link>
       </li>
-    )
+    );
   }
   if (navSection && !specialHref) {
     return (
@@ -57,13 +57,13 @@ const NavLink = ({
         <Link
           href={handleNavSection(title)}
           onClick={() => {
-            setIsOpen((isOpen) => !isOpen)
+            setIsOpen((isOpen) => !isOpen);
           }}
         >
           {title}
         </Link>
       </li>
-    )
+    );
   }
 
   return (
@@ -71,22 +71,22 @@ const NavLink = ({
       <Link
         href={handleNavPage(title)}
         onClick={() => {
-          setIsOpen((isOpen) => !isOpen)
+          setIsOpen((isOpen) => !isOpen);
         }}
       >
         {title}
       </Link>
     </li>
-  )
-}
+  );
+};
 
 export default function Nav() {
-  const [isOpen, setIsOpen] = useState(false)
-  const isMobile = useMatchMedia("(max-width: 768px)")
+  const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useMatchMedia("(max-width: 768px)");
 
   useEffect(() => {
-    handleScroll()
-  }, [])
+    handleScroll();
+  }, []);
 
   return (
     <nav className={`${poppins.variable}`}>
@@ -95,7 +95,7 @@ export default function Nav() {
       </a>
       <div
         onClick={() => {
-          setIsOpen((isOpen) => !isOpen)
+          setIsOpen((isOpen) => !isOpen);
         }}
         className="bars-container"
       >
@@ -115,5 +115,5 @@ export default function Nav() {
         </ul>
       )}
     </nav>
-  )
+  );
 }
