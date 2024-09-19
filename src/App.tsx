@@ -2,9 +2,9 @@
 
 import { LazyMotion, domAnimation } from "framer-motion"
 import Contact from "./components/sections/contact/contact"
-import About from "./components/about/about"
-import Projects from "./components/sections/Projects/projects"
-import Hero from "./components/sections/Header/hero"
+import About from "./components/sections/about/about"
+import Projects from "./components/sections/projects/projects"
+import Hero from "./components/sections/hero/hero"
 import Nav from "./components/Nav/nav"
 
 export default function App() {

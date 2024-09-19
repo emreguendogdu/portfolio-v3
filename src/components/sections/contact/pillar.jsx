@@ -18,7 +18,7 @@ export default function Pillar({ tl, scrollYProgress, position }) {
   )
   return (
     <motion.img
-      src="/images/pillars/pillar1.svg"
+      src="/assets/svgs/pillar.svg"
       alt="Pillar image"
       className={`pillar ${
         position === "left" ? "pillar-left" : "pillar-right"

@@ -3,7 +3,7 @@
 import "./project.scss"
 import React, { useRef } from "react"
 import { projectContents } from "../../../../content/projectContents"
-import { kebabCase } from "@/utils/kebabCase"
+import { kebabCase } from "@/utils/utils"
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import useMatchMedia from "@/hooks/useMatchMedia"
@@ -48,7 +48,7 @@ export default function Project({
           <div className="image-wrapper">
             <motion.div className="bg-image" style={{ scale: IMAGE_SCALE }}>
               <Image
-                src={`/images/projects/${i + 1}.webp`}
+                src={`/assets/images/projects/${i + 1}.webp`}
                 alt={title}
                 fill
                 priority={true}

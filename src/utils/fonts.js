@@ -1,4 +1,3 @@
-// import { Space_Grotesk, Poppins, Manrope, Inter } from "next/font/google"
 import { Poppins } from "next/font/google"
 import localFont from "next/font/local"
 
@@ -10,11 +9,6 @@ export const dance = localFont({
 
 export const PPMonument = localFont({
   src: [
-    // {
-    //   path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-Regular.otf",
-    //   weight: "400",
-    //   style: "normal",
-    // },
     {
       path: "../../public/fonts/PP Monument Extended/PPMonumentExtended-Black.otf",
       weight: "700",
@@ -30,12 +24,6 @@ export const PPMonument = localFont({
   preload: false,
 })
 
-// export const space_grotesk = Space_Grotesk({
-//   subsets: ["latin"],
-//   variable: "--font-space-grotesk",
-//   display: "swap",
-// })
-
 export const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
@@ -43,16 +31,3 @@ export const poppins = Poppins({
   weight: ["200", "300", "400", "500", "600", "700"],
   preload: false,
 })
-
-// export const inter = Inter({
-//   subsets: ["latin"],
-//   variable: "--font-inter",
-//   display: "swap",
-//   weight: ["200", "300", "400", "500", "700"],
-// })
-
-// export const manrope = Manrope({
-//   subsets: ["latin"],
-//   variable: "--font-manrope",
-//   display: "swap",
-// })

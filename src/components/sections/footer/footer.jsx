@@ -19,7 +19,7 @@ export default function Footer() {
     <>
       <footer className={`${poppins.variable}`}>
         <div className="container logo-container">
-          <img src="/logo.svg" alt="" className="logo" />
+          <img src="/assets/svgs/logo.svg" alt="" className="logo" />
         </div>
         <div className="nav-container">
           {" "}
