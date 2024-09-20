@@ -1,17 +1,5 @@
 export const projectContents = [
   {
-    title: "Laodikya Web",
-    body: "",
-    tags: ["HTML", "SCSS", "Astro"],
-    href: "https://laodikyaweb.com",
-  },
-  {
-    title: "Onur Arac Tattoo Art",
-    body: "",
-    tags: ["HTML", "SCSS", "Astro"],
-    href: "https://onurarac.com",
-  },
-  {
     title: "111 Fitness",
     body: "By using React, created reusable components that can further be used to improve this 111 Fitness Page or to create new fitness websites. Used styled-components to style the components and framer-motion to add animations. Implemeted a blur loading system with small versions for images. Works flawlessly on mobile devices.",
     tags: ["React", "framer-motion", "styled-components"],
@@ -36,4 +24,16 @@ export const projectContents = [
     tags: ["React", "D3.js", "HTML", "CSS", "APIs"],
     href: "https://osmangund.github.io/data-visualization-projects",
   },
-];
+  {
+    title: "Laodikya Web",
+    body: "",
+    tags: ["HTML", "SCSS", "Astro"],
+    href: "https://laodikyaweb.com",
+  },
+  {
+    title: "Onur Arac Tattoo Art",
+    body: "",
+    tags: ["HTML", "SCSS", "Astro"],
+    href: "https://onurarac.com",
+  },
+]
