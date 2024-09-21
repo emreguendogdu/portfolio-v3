@@ -49,6 +49,14 @@ export default function Projects() {
             )
           })}
         </div>
+        <a
+          className="more-projects"
+          href="https://github.com/osmangund?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          More Projects
+        </a>
       </section>
     </>
   )

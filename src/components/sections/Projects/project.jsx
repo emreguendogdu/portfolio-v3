@@ -35,8 +35,8 @@ export default function Project({
         style={{
           scale: CARD_SCALE,
           top: isMobile
-            ? `calc(0vh + ${i * 50}px)`
-            : `calc(-5vh + ${i * 50}px)`,
+            ? `calc(0vh + ${i * 25}px)`
+            : `calc(-5vh + ${i * 30}px)`,
         }}
       >
         <a

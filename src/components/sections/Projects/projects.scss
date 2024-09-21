@@ -27,6 +27,33 @@
     justify-content: center;
   }
 
+  .more-projects {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: -80px;
+    width: fit-content;
+
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    padding: 10px 20px;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: white;
+      color: var(--projects-background-color);
+      cursor: pointer;
+    }
+  }
+
   @media only screen and (max-width: 768px) {
     letter-spacing: -3px;
     .big-title {
@@ -39,6 +66,12 @@
     .projects {
       flex-direction: column;
       gap: 2rem;
+    }
+
+    .more-projects {
+      font-size: 1.8rem;
+      padding: 8px 16px;
+      bottom: -80px;
     }
   }
 }
