@@ -40,7 +40,7 @@ const NavLink = ({
       <Link
         href={href ? href : `/#${title.toLowerCase()}`}
         onClick={() => {
-          setIsOpen((isOpen) => !isOpen)
+          setIsOpen && setIsOpen((isOpen) => !isOpen)
         }}
       >
         {title}
@@ -62,14 +62,14 @@ export default function Nav() {
       <a id="logo" href="/" className={dance.variable}>
         OG.
       </a>
-      <div
-        onClick={() => {
-          setIsOpen((isOpen) => !isOpen)
-        }}
-        className="bars-container"
-      >
-        <Bars className="bars" />
-      </div>
+      {isMobile && (
+        <div
+          onClick={() => setIsOpen((isOpen) => !isOpen)}
+          className="bars-container"
+        >
+          <Bars className="bars" />
+        </div>
+      )}
       {isMobile ? (
         <motion.ul animate={{ left: isOpen ? "0" : "-100%" }}>
           {navTitles?.map((link, i) => (
@@ -79,7 +79,7 @@ export default function Nav() {
       ) : (
         <ul>
           {navTitles?.map((link, i) => (
-            <NavLink key={i} link={link} />
+            <NavLink key={i} link={link} setIsOpen={setIsOpen} />
           ))}
         </ul>
       )}
