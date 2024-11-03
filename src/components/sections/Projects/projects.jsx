@@ -55,7 +55,7 @@ export default function Projects() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          More Projects
+          All Projects
         </a>
       </section>
     </>
