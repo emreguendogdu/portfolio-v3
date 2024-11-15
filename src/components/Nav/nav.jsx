@@ -11,7 +11,7 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 
 const navTitles = [
   { title: "Welcome", href: "/#hero" },
-  { title: "Agency", href: "https://laodikyaweb.com" },
+  { title: "Agency", href: "https://ruyadigital.com" },
   { title: "Projects" },
   { title: "Contact" },
 ]
