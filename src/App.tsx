@@ -6,8 +6,10 @@ import About from "./components/sections/about/about"
 import Projects from "./components/sections/projects/projects"
 import Hero from "./components/sections/hero/hero"
 import Nav from "./components/Nav/nav"
+import useLenis from "./hooks/useLenis"
 
 export default function App() {
+  useLenis()
   return (
     <>
       <LazyMotion features={domAnimation}>

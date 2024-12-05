@@ -25,15 +25,15 @@ export const projectContents = [
     href: "https://osmangund.github.io/data-visualization-projects",
   },
   {
-    title: "Laodikya Web",
-    body: "",
-    tags: ["HTML", "SCSS", "Astro"],
-    href: "https://laodikyaweb.com",
-  },
-  {
     title: "Onur Arac Tattoo Art",
     body: "",
     tags: ["HTML", "SCSS", "Astro"],
     href: "https://onurarac.com",
+  },
+  {
+    title: "Ruya Digital",
+    body: "",
+    tags: ["HTML", "Tailwind CSS", "React", "Astro"],
+    href: "https://ruyadigital.com",
   },
 ]
