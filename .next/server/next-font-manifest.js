@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/osmangund/cs/portfolios/osmangund.tech/src/app/page":[]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';

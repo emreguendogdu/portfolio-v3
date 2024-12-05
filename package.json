@@ -1,12 +1,10 @@
 {
-  "description": "Personal Website",
+  "description": "Portfolio V3",
   "name": "osmangund.tech",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "predeploy": "npm run build",
-    "add-domain": "echo \"osmangund.tech\" > ./dist/CNAME",
-    "deploy": "npm run add-domain && gh-pages -d dist",
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",
