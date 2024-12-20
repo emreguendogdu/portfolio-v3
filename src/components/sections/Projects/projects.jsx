@@ -31,8 +31,10 @@ export default function Projects() {
           {projectContents.map((project, i) => {
             const { title, tags, href } = project
             const kebabTitle = kebabCase(title)
-            const src = `/assets/images/projects/${kebabTitle}.webp`
-            const targetScale = 1 - (projectContents.length - i) * 0.05
+            const src = `/assets/images/projects/${kebabTitle}.${
+              project.title === "Design Challenges" ? "gif" : "webp"
+            }`
+            const targetScale = 1 - (projectContents.length - i) * 0.03
             return (
               <React.Fragment key={`pr__${i}`}>
                 <Project
