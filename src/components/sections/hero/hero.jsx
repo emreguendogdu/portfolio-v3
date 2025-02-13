@@ -77,11 +77,15 @@ const UNDERLINE_VARIANTS = {
 const TEXT_VARIANTS = {
   initial: {
     opacity: 0,
+    filter: "blur(12px)",
+    transform: "perspective(1000px) translate3d(0, 0, 150px)",
   },
   enter: {
     opacity: 1,
+    filter: "blur(0px)",
+    transform: "perspective(1000px) translate3d(0, 0, 0)",
     transition: {
-      duration: 0.15,
+      duration: 0.75,
     },
   },
 }
@@ -104,12 +108,8 @@ export default function Hero() {
       >
         <div className="hero-content">
           <motion.div {...anim(CONTAINER_VARIANTS)}>
-            <motion.div {...anim(DELAYED_NAME_VARIANTS)}>
+            <motion.div {...anim(DELAYED_NAME_VARIANTS)} className='text-container'>
               <motion.h1>
-                <motion.span variants={TEXT_VARIANTS} className="title">
-                  Osman&nbsp;
-                </motion.span>
-
                 <motion.span variants={TEXT_VARIANTS} className="title">
                   Emre&nbsp;
                 </motion.span>

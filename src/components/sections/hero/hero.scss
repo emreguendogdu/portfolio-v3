@@ -18,6 +18,11 @@
     top: 0;
 
     overflow: hidden;
+
+    .text-container {
+      transform: translateY(-50%);
+    }
+
     h1,
     h2,
     p,
@@ -40,14 +45,14 @@
       text-transform: uppercase;
       display: inline-block;
       margin: 0;
-      font-size: clamp(5.8rem, 12vw, 20rem);
+      font-size: clamp(5.8rem, 11vw, 20rem);
+      letter-spacing: -0.05em;
     }
 
     h2 {
-      font-size: clamp(4rem, 5vw, 10rem);
+      font-size: clamp(4rem, 3vw, 10rem);
       letter-spacing: -1px;
-      margin-top: 30px;
-      margin-bottom: 20px;
+      margin-top: 10px;
     }
     p {
       font-size: 2rem;
@@ -61,18 +66,18 @@
 
     .underline {
       position: relative;
-    }
 
-    .underline::after {
-      content: "";
-      width: var(--after-width);
-      height: clamp(12px, 5vw, 48px);
-      background-image: url("/assets/svgs/smallunderline.svg");
-      position: absolute;
-      background-position: center;
-      background-repeat: no-repeat;
-      left: 0;
-      bottom: -10px;
+      &::after {
+        content: "";
+        width: var(--after-width);
+        height: clamp(12px, 3vw, 48px);
+        background-image: url("/assets/svgs/smallunderline.svg");
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        left: 0;
+        bottom: -15px;
+      }
     }
 
     .subtitle {

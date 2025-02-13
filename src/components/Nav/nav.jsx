@@ -10,8 +10,7 @@ import useMatchMedia from "@/hooks/useMatchMedia"
 import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 
 const navTitles = [
-  { title: "Welcome", href: "/#hero" },
-  { title: "Agency", href: "https://ruyadigital.com" },
+  { title: "Home", href: "/" },
   { title: "Projects" },
   { title: "Contact" },
 ]
@@ -60,7 +59,7 @@ export default function Nav() {
   return (
     <nav className={`${poppins.variable}`}>
       <a id="logo" href="/" className={dance.variable}>
-        OG.
+        emregnd.
       </a>
       {isMobile && (
         <div
