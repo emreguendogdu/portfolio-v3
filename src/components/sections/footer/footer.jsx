@@ -36,11 +36,11 @@ export default function Footer() {
             <div className="container-links">
               <Link
                 target="_blank"
-                href="https://www.linkedin.com/in/osmangund/"
+                href="https://www.linkedin.com/in/emregnd/"
               >
                 Linkedin
               </Link>
-              <Link target="_blank" href="https://www.github.com/osmangund/">
+              <Link target="_blank" href="https://www.github.com/emreguendogdu/">
                 Github
               </Link>
             </div>

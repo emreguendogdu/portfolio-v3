@@ -8,7 +8,7 @@ export const metadata = {
   description:
     "Emre Gundogdu is a front end developer and web designer who specializes in creating and designing remarkable digital experiences to help people all around the world.",
   keywords:
-    "Osman Emre Gundogdu, Osman Emre Gündoğdu, Osman Gündoğdu, Gündoğdu, Emre Gündoğdu, Osman, Emre, Gundogdu, Gündoğdu, Frontend, Developer, Web, Portfolio, Personal, Website, Book, Notes, Software, Engineer, Front, End, Full, Fullstack, Stack, osmangund, Canother, wyarn, osmangund.github.io",
+    "Osman Emre Gundogdu, Osman Emre Gündoğdu, Osman Gündoğdu, Gündoğdu, Emre Gündoğdu, Emre Gundogdu, Osman, Emre, Gundogdu, Gündoğdu, Frontend, Developer, Web, Portfolio, Personal, Website, Book, Notes, Software, Engineer, Front, End, Full, Fullstack, Stack, osmangund, emregnd, emregund, Canother, wyarn, osmangund.github.io",
 }
 
 export default function MyApp() {

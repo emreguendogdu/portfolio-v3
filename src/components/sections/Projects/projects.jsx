@@ -53,7 +53,7 @@ export default function Projects() {
         </div>
         <a
           className="more-projects"
-          href="https://github.com/osmangund?tab=repositories"
+          href="https://github.com/emreguendogdu?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
         >

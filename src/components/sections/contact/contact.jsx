@@ -73,7 +73,7 @@ export default function Contact() {
           <Triangle style={{ opacity: TRIANGLE_OPACITY }} classes="middle" />
           <div className="contact-text">
             <h1>
-              <a href="mailto:hello@osmangund.tech">
+              <a href="mailto:hello@emregnd.com">
                 {TITLE_TEXT.split("").map((letter, i) => {
                   // const random = Math.floor(Math.random() * -175) - 75
                   const PARALLAX_TEXT = useTransform(
@@ -103,7 +103,7 @@ export default function Contact() {
               <li>
                 <Link
                   href="
-                mailto:hello@osmangund.tech?subject=We need to talk &body=Hi Osman, I found your website and I have an idea on..."
+                mailto:hello@emregnd.com?subject=We need to talk &body=Hi Osman, I found your website and I have an idea on..."
                 >
                   email
                 </Link>
@@ -111,7 +111,7 @@ export default function Contact() {
               <li>
                 <Link
                   href="
-                https://www.linkedin.com/in/osmangund/"
+                https://www.linkedin.com/in/emregnd/"
                 >
                   linkedin
                 </Link>
@@ -119,7 +119,7 @@ export default function Contact() {
               <li>
                 <Link
                   href="
-                https://www.github.com/osmangund/"
+                https://www.github.com/emreguendogdu/"
                 >
                   github
                 </Link>

@@ -3,7 +3,7 @@ export const projectContents = [
     title: "111 Fitness",
     body: "By using React, created reusable components that can further be used to improve this 111 Fitness Page or to create new fitness websites. Used styled-components to style the components and framer-motion to add animations. Implemeted a blur loading system with small versions for images. Works flawlessly on mobile devices.",
     tags: ["React", "framer-motion", "styled-components"],
-    href: "https://osmangund.github.io/111-fitness/",
+    href: "https://emreguendogdu.github.io/111-fitness/",
   },
   {
     title: "Letters App",
@@ -22,7 +22,7 @@ export const projectContents = [
     fakeTitle: "dvp",
     body: "Worked with five different datasets and used D3.js to display them. Created a bar chart, scatter plot, heat map, choropleth map, and a treemap. With the use of React, merged all projects into one app. On treemap, handled three different datasets on single page.",
     tags: ["React", "D3.js", "HTML", "CSS", "APIs"],
-    href: "https://osmangund.github.io/data-visualization-projects/",
+    href: "https://emreguendogdu.github.io/data-visualization-projects/",
   },
   {
     title: "Onur Arac Tattoo Art",
@@ -40,6 +40,6 @@ export const projectContents = [
     title: "Design Challenges",
     body: "",
     tags: ["Figma"],
-    href: "https://linkedin.com/in/osmangund/",
+    href: "https://linkedin.com/in/emregnd/",
   },
 ]

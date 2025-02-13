@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://osmangund.tech
+Host: https://emregnd.com
 
 # Sitemaps
-Sitemap: https://osmangund.tech/sitemap.xml
+Sitemap: https://emregnd.com/sitemap.xml
