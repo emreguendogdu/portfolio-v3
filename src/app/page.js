@@ -4,9 +4,9 @@ import Script from "next/script"
 import GoogleAnalytics from "@/components/GoogleAnalytics"
 
 export const metadata = {
-  title: "Osman Emre Gundogdu —— Front End Developer",
+  title: "Emre Gundogdu —— Front End Developer",
   description:
-    "Osman Emre Gündoğdu is a front end developer and web designer who specializes in creating and designing remarkable digital experiences to help people all around the world.",
+    "Emre Gundogdu is a front end developer and web designer who specializes in creating and designing remarkable digital experiences to help people all around the world.",
   keywords:
     "Osman Emre Gundogdu, Osman Emre Gündoğdu, Osman Gündoğdu, Gündoğdu, Emre Gündoğdu, Osman, Emre, Gundogdu, Gündoğdu, Frontend, Developer, Web, Portfolio, Personal, Website, Book, Notes, Software, Engineer, Front, End, Full, Fullstack, Stack, osmangund, Canother, wyarn, osmangund.github.io",
 }
@@ -15,16 +15,15 @@ export default function MyApp() {
   const structuredData = {
     "@context": "http://schema.org",
     "@type": "Person",
-    name: "Osman Emre Gündoğdu",
+    name: "Emre Gundogdu",
     jobTitle: "Front End Developer",
-    url: "https://www.osmangund.tech",
+    url: "https://www.emregnd.com",
     sameAs: [
-      "https://www.linkedin.com/in/osmangund",
-      "https://twitter.com/osmangund",
-      "https://github.com/osmangund",
+      "https://www.linkedin.com/in/emregnd",
+      "https://github.com/emreguendogdu",
     ],
     description:
-      "Osman Emre Gündoğdu is a software engineer who specializes in creating and designing remarkable digital experiences.",
+      "Emre Gundogdu is a software engineer who specializes in creating and designing remarkable digital experiences.",
   }
 
   return (
